@@ -4,37 +4,63 @@ using UnityEngine;
 
 public class DriftParticles : MonoBehaviour
 {
-    public ParticleSystem[] frontDriftParticles;
-    public ParticleSystem[] backDriftParticles;
+	public ParticleSystem[] frontDriftParticles;
+	public ParticleSystem[] backDriftParticles;
 
-    private VehicleMovement vehicle;
+	private VehicleMovement vehicle;
+	private KeyCode driftKey;
+	private bool goingForwards;
+	private bool lastGoingForwards;
+	private bool particlesActive;
 
 
-    private void Awake()
-    {
-        vehicle = GetComponentInParent<VehicleMovement>();
-    }
+	private void Awake()
+	{
+		vehicle = GetComponentInParent<VehicleMovement>();
+		driftKey = vehicle.driftKey;
+	}
 
-    private void Update()
-    {
-        // Particles are not playing
-        if (vehicle.drifting)
-        {
-            if (vehicle.localVel.y > 0)
-                foreach (var particle in backDriftParticles)
-                    particle.Play();
+	private void Update()
+	{
+		goingForwards = vehicle.localVel.y >= 0;
 
-            else
-                foreach (var particle in frontDriftParticles)
-                    particle.Play();
-        }
-        else
-        {
-            foreach (var particle in backDriftParticles)
-                particle.Stop();
+		if (Input.GetKeyDown(driftKey))
+		{
+			particlesActive = true;
+			UpdateActiveParticles(true);
+		}
 
-            foreach (var particle in frontDriftParticles)
-                particle.Stop();
-        }
-    }
+		if (Input.GetKeyUp(driftKey))
+		{
+			particlesActive = false;
+			UpdateActiveParticles(false);
+		}
+
+		if (goingForwards != lastGoingForwards)
+			UpdateActiveParticles(particlesActive);
+	}
+
+	void UpdateActiveParticles(bool start)
+	{
+		if (start)
+		{
+			lastGoingForwards = goingForwards;
+
+			if (goingForwards)
+				foreach (ParticleSystem particle in backDriftParticles)
+					particle.Play();
+			else
+				foreach (ParticleSystem particle in frontDriftParticles)
+					particle.Play();
+		}
+		else
+		{
+			lastGoingForwards = goingForwards;
+
+			foreach (ParticleSystem particle in backDriftParticles)
+				particle.Stop();
+			foreach (ParticleSystem particle in frontDriftParticles)
+				particle.Stop();
+		}
+	}
 }

@@ -10,7 +10,6 @@ public class VehicleMovement : MonoBehaviour
     public float turnSpeed = 150f;
     public float drag = 2f;
     public float angularDrag = 1f;
-    public bool drifting;
     public float tyreGrip = 10f;
     public float driftGrip = -3f;
     public float gainGripMult = .2f;
@@ -24,8 +23,9 @@ public class VehicleMovement : MonoBehaviour
     private float turnInput;
     private float currentGrip;
     private float speedRatio;
+	private bool drifting;
 
-    void Awake()
+	void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.drag = drag;
@@ -46,7 +46,7 @@ public class VehicleMovement : MonoBehaviour
 
         currentGrip += !drifting ? gainGripMult : -loseGripMult;
         currentGrip = Mathf.Clamp(currentGrip, -driftGrip, tyreGrip);
-    }
+	}
 
     private void Move()
     {
