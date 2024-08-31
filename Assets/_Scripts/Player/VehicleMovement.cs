@@ -15,6 +15,7 @@ public class VehicleMovement : MonoBehaviour
     public float gainGripMult = .2f;
     public float loseGripMult = 1f;
     public KeyCode driftKey = KeyCode.LeftShift;
+    public TrailRenderer[] driftTrails;
 
     [HideInInspector] public Vector2 localVel;
 
@@ -43,6 +44,8 @@ public class VehicleMovement : MonoBehaviour
         Steer();
 
         drifting = Input.GetKey(driftKey);
+        foreach (var driftTrail in driftTrails)
+            driftTrail.emitting = drifting;
 
         currentGrip += !drifting ? gainGripMult : -loseGripMult;
         currentGrip = Mathf.Clamp(currentGrip, -driftGrip, tyreGrip);
