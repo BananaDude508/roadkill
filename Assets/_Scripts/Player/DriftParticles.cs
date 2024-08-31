@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class DriftParticles : MonoBehaviour
 {
-	public ParticleSystem[] frontDriftParticles;
-	public ParticleSystem[] backDriftParticles;
+	public ParticleSystem[] driftParticles;
 
 	private VehicleMovement vehicle;
 	private KeyCode driftKey;
-	private bool goingForwards;
-	private bool lastGoingForwards;
 
 
 	private void Awake()
@@ -21,43 +18,20 @@ public class DriftParticles : MonoBehaviour
 
 	private void Update()
 	{
-		goingForwards = vehicle.localVel.y >= 0;
+		if (Input.GetKeyUp(driftKey))
+			foreach (ParticleSystem particle in driftParticles)
+				particle.Stop();
 
 		if (Input.GetKeyDown(driftKey))
-			UpdateActiveParticles();
-
-		if (Input.GetKeyUp(driftKey))
-			UpdateActiveParticles(false);
-
-		if (goingForwards != lastGoingForwards && Input.GetKey(driftKey))
-				UpdateActiveParticles();
-	}
-
-	void UpdateActiveParticles(bool start = true)
-	{
-		if (!start)
-		{
-			foreach (ParticleSystem particle in frontDriftParticles)
-				particle.Stop();
-			foreach (ParticleSystem particle in backDriftParticles)
-				particle.Stop();
-			return;
-		}
-
-		if (goingForwards)
-		{
-			foreach (ParticleSystem particle in backDriftParticles)
+			foreach (ParticleSystem particle in driftParticles)
 				particle.Play();
-			foreach (ParticleSystem particle in frontDriftParticles)
-				particle.Stop();
-		}
-		else
-		{
-			foreach (ParticleSystem particle in frontDriftParticles)
-				particle.Play();
-			foreach (ParticleSystem particle in backDriftParticles)
-				particle.Stop();
-		}
-		lastGoingForwards = goingForwards;
-	}
+
+		if (Input.GetKey(driftKey))
+            foreach (ParticleSystem particle in driftParticles)
+			{
+				var main = particle.main;
+				main.startRotationZ = (-vehicle.transform.rotation.eulerAngles.z * Mathf.Deg2Rad) + (Mathf.PI / 2);
+			}
+				
+    }
 }
