@@ -16,6 +16,9 @@ public class VehicleMovement : MonoBehaviour
     public float loseGripMult = 1f;
     public KeyCode driftKey = KeyCode.LeftShift;
     public TrailRenderer[] driftTrails;
+    public GameObject body;
+    public float driftBodyRotation;
+    public float bodyRotaPerSec = 150f;
 
     [HideInInspector] public Vector2 localVel;
 
@@ -25,6 +28,9 @@ public class VehicleMovement : MonoBehaviour
     private float currentGrip;
     private float speedRatio;
 	private bool drifting;
+    private float lastRotation;
+    private float currentBodyRotation;
+
 
 	void Awake()
     {
@@ -47,8 +53,17 @@ public class VehicleMovement : MonoBehaviour
         foreach (var driftTrail in driftTrails)
             driftTrail.emitting = drifting;
 
-        currentGrip += !drifting ? gainGripMult : -loseGripMult;
+        currentGrip += drifting ? -loseGripMult : gainGripMult;
         currentGrip = Mathf.Clamp(currentGrip, -driftGrip, tyreGrip);
+
+		float angular_velocity = rb.rotation - lastRotation;
+
+        UpdateBodyRotationValue();
+
+		if (drifting)
+            body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
+        else
+            body.transform.localRotation = Quaternion.identity;
 	}
 
     private void Move()
@@ -65,12 +80,45 @@ public class VehicleMovement : MonoBehaviour
     {
         float rotationAmount = -Mathf.Sign(localVel.y) * turnInput * turnSpeed * speedRatio * Time.fixedDeltaTime;
         rotationAmount *= !drifting ? 1f : 1.2f;
+
+        lastRotation = rb.rotation;
+
         rb.rotation += rotationAmount;
         rb.rotation = Mathf.Repeat(rb.rotation, 360);
+
+        if (lastRotation - rotationAmount != rb.rotation)
+        {
+            lastRotation = rb.rotation - rotationAmount;
+        }
         
 
 
         // Drifting and grip
         rb.AddForce(transform.right * (-localVel.x * currentGrip));
     }
+
+    void UpdateBodyRotationValue()
+    {
+        if (Mathf.Abs(localVel.y) <= 0.6f) return;
+
+        if (!drifting || turnInput == 0)
+        {
+            if (currentBodyRotation <= 1.5f)
+                currentBodyRotation = 0f;
+
+			else if (currentBodyRotation != 0)
+                currentBodyRotation -= Time.deltaTime * bodyRotaPerSec * (currentBodyRotation > 0 ? 1 : -1);
+
+            return;
+        }
+        if (turnInput > 0)
+        {
+            currentBodyRotation -= Time.deltaTime * bodyRotaPerSec;
+        }
+        else if (turnInput < 0)
+        {
+            currentBodyRotation += Time.deltaTime * bodyRotaPerSec;
+        }   
+		currentBodyRotation = Mathf.Clamp(currentBodyRotation, -driftBodyRotation, driftBodyRotation);
+	}
 }
