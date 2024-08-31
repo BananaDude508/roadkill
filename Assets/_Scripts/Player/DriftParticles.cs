@@ -11,7 +11,6 @@ public class DriftParticles : MonoBehaviour
 	private KeyCode driftKey;
 	private bool goingForwards;
 	private bool lastGoingForwards;
-	private bool particlesActive;
 
 
 	private void Awake()
@@ -25,42 +24,40 @@ public class DriftParticles : MonoBehaviour
 		goingForwards = vehicle.localVel.y >= 0;
 
 		if (Input.GetKeyDown(driftKey))
-		{
-			particlesActive = true;
-			UpdateActiveParticles(true);
-		}
+			UpdateActiveParticles();
 
 		if (Input.GetKeyUp(driftKey))
-		{
-			particlesActive = false;
 			UpdateActiveParticles(false);
-		}
 
-		if (goingForwards != lastGoingForwards)
-			UpdateActiveParticles(particlesActive);
+		if (goingForwards != lastGoingForwards && Input.GetKey(driftKey))
+				UpdateActiveParticles();
 	}
 
-	void UpdateActiveParticles(bool start)
+	void UpdateActiveParticles(bool start = true)
 	{
-		if (start)
+		if (!start)
 		{
-			lastGoingForwards = goingForwards;
-
-			if (goingForwards)
-				foreach (ParticleSystem particle in backDriftParticles)
-					particle.Play();
-			else
-				foreach (ParticleSystem particle in frontDriftParticles)
-					particle.Play();
-		}
-		else
-		{
-			lastGoingForwards = goingForwards;
-
+			foreach (ParticleSystem particle in frontDriftParticles)
+				particle.Stop();
 			foreach (ParticleSystem particle in backDriftParticles)
 				particle.Stop();
+			return;
+		}
+
+		if (goingForwards)
+		{
+			foreach (ParticleSystem particle in backDriftParticles)
+				particle.Play();
 			foreach (ParticleSystem particle in frontDriftParticles)
 				particle.Stop();
 		}
+		else
+		{
+			foreach (ParticleSystem particle in frontDriftParticles)
+				particle.Play();
+			foreach (ParticleSystem particle in backDriftParticles)
+				particle.Stop();
+		}
+		lastGoingForwards = goingForwards;
 	}
 }
