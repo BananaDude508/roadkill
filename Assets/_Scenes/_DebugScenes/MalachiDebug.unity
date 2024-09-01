@@ -558,8 +558,8 @@ MonoBehaviour:
   - {fileID: 1534406843}
   - {fileID: 447589000}
   body: {fileID: 1362564428}
-  driftBodyRotation: 25
-  bodyRotaPerSec: 50
+  driftBodyRotation: 35
+  bodyRotaPerSec: 70
   localVel: {x: 0, y: 0}
 --- !u!4 &770727058
 Transform:
