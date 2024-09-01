@@ -561,7 +561,6 @@ MonoBehaviour:
   driftBodyRotation: 25
   bodyRotaPerSec: 50
   localVel: {x: 0, y: 0}
-  currentBodyRotation: 0
 --- !u!4 &770727058
 Transform:
   m_ObjectHideFlags: 0
@@ -1076,7 +1075,7 @@ GameObject:
   - component: {fileID: 1637414414}
   - component: {fileID: 1637414415}
   m_Layer: 0
-  m_Name: Square
+  m_Name: MainBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,7 +1220,7 @@ GameObject:
   - component: {fileID: 1994641104}
   - component: {fileID: 1994641105}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

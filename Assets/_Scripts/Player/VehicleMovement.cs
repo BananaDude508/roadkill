@@ -56,8 +56,6 @@ public class VehicleMovement : MonoBehaviour
         currentGrip += drifting ? -loseGripMult : gainGripMult;
         currentGrip = Mathf.Clamp(currentGrip, -driftGrip, tyreGrip);
 
-		float angular_velocity = rb.rotation - lastRotation;
-
         UpdateBodyRotationValue();
 
 		if (drifting)
@@ -90,10 +88,7 @@ public class VehicleMovement : MonoBehaviour
         {
             lastRotation = rb.rotation - rotationAmount;
         }
-        
 
-
-        // Drifting and grip
         rb.AddForce(transform.right * (-localVel.x * currentGrip));
     }
 
@@ -103,7 +98,7 @@ public class VehicleMovement : MonoBehaviour
 
         if (!drifting || turnInput == 0)
         {
-            if (currentBodyRotation <= 1.5f)
+            if (Mathf.Abs(currentBodyRotation) <= 1f)
                 currentBodyRotation = 0f;
 
 			else if (currentBodyRotation != 0)
@@ -111,14 +106,7 @@ public class VehicleMovement : MonoBehaviour
 
             return;
         }
-        if (turnInput > 0)
-        {
-            currentBodyRotation -= Time.deltaTime * bodyRotaPerSec;
-        }
-        else if (turnInput < 0)
-        {
-            currentBodyRotation += Time.deltaTime * bodyRotaPerSec;
-        }   
+        currentBodyRotation -= Time.deltaTime * bodyRotaPerSec * (turnInput > 0 ? 1 : -1);
 		currentBodyRotation = Mathf.Clamp(currentBodyRotation, -driftBodyRotation, driftBodyRotation);
 	}
 }

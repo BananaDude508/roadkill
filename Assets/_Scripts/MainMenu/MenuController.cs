@@ -102,21 +102,21 @@ public class MenuController : MonoBehaviour
 
 	private void UpdateFullscreenText()
 	{
-		switch (fullScreenMode)
+		switch ((FullScreenMode)fullScreenMode)
 		{
-			case 0:
+			case FullScreenMode.ExclusiveFullScreen:
 				fullscreenText.text = "Exclusive Fullscreen";
 				break;
 
-			case 1:
+			case FullScreenMode.FullScreenWindow:
 				fullscreenText.text = "Fullscreen Window";
 				break;
 
-			case 2:
+			case FullScreenMode.MaximizedWindow:
 				fullscreenText.text = "Maximized Window";
 				break;
 
-			case 3:
+			case FullScreenMode.Windowed:
 				fullscreenText.text = "Windowed";
 				break;
 
