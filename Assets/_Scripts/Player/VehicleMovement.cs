@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using static PlayerStats;
+using static PlayerPopups;
+using TMPro;
 
 public class VehicleMovement : MonoBehaviour
 {
+    public TextMeshProUGUI popupText;
+
     public TrailRenderer[] driftTrails;
     public GameObject body;
 
@@ -25,9 +29,13 @@ public class VehicleMovement : MonoBehaviour
     {
         vehicleMovement = this;
         rb = GetComponent<Rigidbody2D>();
+
         rb.drag = vehicleStats.drag;
         rb.angularDrag = vehicleStats.angularDrag;
         currentGrip = vehicleStats.tyreGrip;
+
+        InitPopup(popupText);
+        ClearPopupText();
     }
 
 

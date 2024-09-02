@@ -17,8 +17,10 @@ public class VehicleStats
     public float gainGripMult = .2f;
     public float loseGripMult = 1f;
     public KeyCode driftKey = KeyCode.LeftShift;
-    public float driftBodyRotation = 35f;
-    public float bodyRotaPerSec = 70f;
+    public float driftBodyRotation = 35f; // Additional rotation applied to body when drifting (visual and collider only)
+    public float bodyRotaPerSec = 70f; // Body rotation per second to reach driftBodyRotation
+    public float driveDamage = 5f; // Damage dealt when driving into an enemy headon
+    public float driftDamageMod = 2f; // Damage multiplier dealth when drifting your tail into an enemy
 
     public VehicleStats()
     {
@@ -34,5 +36,7 @@ public class VehicleStats
         driftKey = KeyCode.LeftShift;
         driftBodyRotation = 35f;
         bodyRotaPerSec = 70f;
+        driveDamage = 5f;
+        driftDamageMod = 2f;
     }
 }
