@@ -2,23 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using static PlayerStats;
 
 public class VehicleMovement : MonoBehaviour
 {
-    public float acceleration = 35f;
-    public float maxSpeed = 13f;
-    public float turnSpeed = 150f;
-    public float drag = 2f;
-    public float angularDrag = 1f;
-    public float tyreGrip = 10f;
-    public float driftGrip = -3f;
-    public float gainGripMult = .2f;
-    public float loseGripMult = 1f;
-    public KeyCode driftKey = KeyCode.LeftShift;
     public TrailRenderer[] driftTrails;
     public GameObject body;
-    public float driftBodyRotation;
-    public float bodyRotaPerSec = 150f;
 
     [HideInInspector] public Vector2 localVel;
 
@@ -32,16 +21,17 @@ public class VehicleMovement : MonoBehaviour
     private float currentBodyRotation;
 
 
-	void Awake()
+	private void Awake()
     {
+        vehicleMovement = this;
         rb = GetComponent<Rigidbody2D>();
-        rb.drag = drag;
-        rb.angularDrag = angularDrag;
-        currentGrip = tyreGrip;
+        rb.drag = vehicleStats.drag;
+        rb.angularDrag = vehicleStats.angularDrag;
+        currentGrip = vehicleStats.tyreGrip;
     }
 
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         moveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
@@ -49,12 +39,12 @@ public class VehicleMovement : MonoBehaviour
         Move();
         Steer();
 
-        drifting = Input.GetKey(driftKey);
+        drifting = Input.GetKey(vehicleStats.driftKey);
         foreach (var driftTrail in driftTrails)
             driftTrail.emitting = drifting;
 
-        currentGrip += drifting ? -loseGripMult : gainGripMult;
-        currentGrip = Mathf.Clamp(currentGrip, -driftGrip, tyreGrip);
+        currentGrip += drifting ? -vehicleStats.loseGripMult : vehicleStats.gainGripMult;
+        currentGrip = Mathf.Clamp(currentGrip, -vehicleStats.driftGrip, vehicleStats.tyreGrip);
 
         UpdateBodyRotationValue();
 
@@ -66,17 +56,17 @@ public class VehicleMovement : MonoBehaviour
 
     private void Move()
     {
-        rb.AddForce(transform.up * moveInput * acceleration);
+        rb.AddForce(transform.up * moveInput * vehicleStats.acceleration);
 
-        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, vehicleStats.maxSpeed);
 
         localVel = transform.InverseTransformDirection(rb.velocity);
-        speedRatio = localVel.y / maxSpeed;
+        speedRatio = localVel.y / vehicleStats.maxSpeed;
     }
 
     private void Steer()
     {
-        float rotationAmount = -Mathf.Sign(localVel.y) * turnInput * turnSpeed * speedRatio * Time.fixedDeltaTime;
+        float rotationAmount = -Mathf.Sign(localVel.y) * turnInput * vehicleStats.turnSpeed * speedRatio * Time.fixedDeltaTime;
         rotationAmount *= !drifting ? 1f : 1.2f;
 
         lastRotation = rb.rotation;
@@ -92,7 +82,7 @@ public class VehicleMovement : MonoBehaviour
         rb.AddForce(transform.right * (-localVel.x * currentGrip));
     }
 
-    void UpdateBodyRotationValue()
+    private void UpdateBodyRotationValue()
     {
         if (Mathf.Abs(localVel.y) <= 0.6f) return;
 
@@ -102,11 +92,11 @@ public class VehicleMovement : MonoBehaviour
                 currentBodyRotation = 0f;
 
 			else if (currentBodyRotation != 0)
-                currentBodyRotation -= Time.deltaTime * bodyRotaPerSec * (currentBodyRotation > 0 ? 1 : -1);
+                currentBodyRotation -= Time.deltaTime * vehicleStats.bodyRotaPerSec * (currentBodyRotation > 0 ? 1 : -1);
 
             return;
         }
-        currentBodyRotation -= Time.deltaTime * bodyRotaPerSec * (turnInput > 0 ? 1 : -1);
-		currentBodyRotation = Mathf.Clamp(currentBodyRotation, -driftBodyRotation, driftBodyRotation);
+        currentBodyRotation -= Time.deltaTime * vehicleStats.bodyRotaPerSec * (turnInput > 0 ? 1 : -1);
+		currentBodyRotation = Mathf.Clamp(currentBodyRotation, -vehicleStats.driftBodyRotation, vehicleStats.driftBodyRotation);
 	}
 }
