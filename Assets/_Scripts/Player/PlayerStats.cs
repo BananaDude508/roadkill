@@ -17,4 +17,12 @@ public static class PlayerStats
 
     // Weapon Stats
     public static WeaponStats weaponStats = new WeaponStats();
+
+    public static void ReInit()
+    {
+        money = 0;
+        health = 10;
+        vehicleStats = new VehicleStats();
+        weaponStats = new WeaponStats();
+    }
 }

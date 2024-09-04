@@ -13,6 +13,8 @@ public class VehicleMovement : MonoBehaviour
     public TrailRenderer[] driftTrails;
     public GameObject body;
 
+    public GameObject garageMenu;
+
     [HideInInspector] public Vector2 localVel;
 
     private Rigidbody2D rb;
@@ -23,6 +25,11 @@ public class VehicleMovement : MonoBehaviour
 	private bool drifting;
     private float lastRotation;
     private float currentBodyRotation;
+
+    public Rigidbody2D rigidbody2d
+    {
+        get { return rb; }
+    }
 
 
 	private void Awake()
