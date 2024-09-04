@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyStats
 {
-    public float health = 3f;
+    public float health ;
+    public float maxHealth = 5;
     public float damage = 1f;
     public float speed = 1f;
     public int moneyReward = 5;
@@ -16,4 +19,18 @@ public class EnemyStats
         speed = 1f;
         moneyReward = 5;
     }
+    void start()
+    {
+        health = maxHealth;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            // body.IsDestroyed();
+        }
+    }
+
 }
