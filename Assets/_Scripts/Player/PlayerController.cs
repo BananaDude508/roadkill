@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        print(playerHealth);
     }
 
     public void HurtEnemy(BasicEnemyController enemy, bool isDrifting)

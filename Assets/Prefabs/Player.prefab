@@ -652,6 +652,7 @@ GameObject:
   - component: {fileID: 6351442605958183952}
   - component: {fileID: 6351442605958183954}
   - component: {fileID: 6351442605958183949}
+  - component: {fileID: 1619130280}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -688,14 +689,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9f29dd89ec1594681a5b9c69325a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupText: {fileID: 6351442606692485645}
   driftTrails:
   - {fileID: 6351442606300430509}
   - {fileID: 6351442607508527120}
   - {fileID: 6351442607342506041}
   - {fileID: 6351442606239959562}
   body: {fileID: 6351442607505962446}
-  garageMenu: {fileID: 6351442606684785108}
   localVel: {x: 0, y: 0}
 --- !u!50 &6351442605958183949
 Rigidbody2D:
@@ -718,6 +717,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1619130280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351442605958183948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ef6f6c419f56e40a70cad3ab6f362f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupText: {fileID: 6351442606692485645}
+  garageMenu: {fileID: 6351442606684785108}
 --- !u!1 &6351442605993765144
 GameObject:
   m_ObjectHideFlags: 0
