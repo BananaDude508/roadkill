@@ -276,7 +276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -2.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6053263638507472366
@@ -605,10 +605,10 @@ RectTransform:
   m_Father: {fileID: 6351442607779084782}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -754.1667}
-  m_SizeDelta: {x: 300, y: 241.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6351442605851409753
 CanvasRenderer:
@@ -691,7 +691,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6351442605851409752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6351442606682759301}
+        m_TargetAssemblyTypeName: GarageHandler, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: none
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6351442605892490937
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,10 +874,10 @@ RectTransform:
   m_Father: {fileID: 6351442607779084782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -170.83334}
-  m_SizeDelta: {x: 300, y: 241.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6351442605898423602
 CanvasRenderer:
@@ -948,7 +960,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6351442605898423597}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6351442606682759301}
+        m_TargetAssemblyTypeName: GarageHandler, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: vehicledefense
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6351442605903728336
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +984,7 @@ GameObject:
   - component: {fileID: 6351442605903728337}
   - component: {fileID: 6351442605903728342}
   m_Layer: 0
-  m_Name: Vehicle Upgrades
+  m_Name: Vehicle Upgrades 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1257,10 +1281,10 @@ RectTransform:
   m_Father: {fileID: 6351442605783432679}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -170.83334}
-  m_SizeDelta: {x: 300, y: 241.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6351442606040666258
 CanvasRenderer:
@@ -1343,7 +1367,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6351442606040666253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6351442606682759301}
+        m_TargetAssemblyTypeName: GarageHandler, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: speed
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6351442606263093896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1391,7 @@ GameObject:
   - component: {fileID: 6351442606263093897}
   - component: {fileID: 6351442606263093902}
   m_Layer: 0
-  m_Name: Upgrade Panel 2
+  m_Name: Vehicle Upgrades 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1668,10 +1704,10 @@ RectTransform:
   m_Father: {fileID: 6351442605783432679}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -462.50003}
-  m_SizeDelta: {x: 300, y: 241.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6351442606464821517
 CanvasRenderer:
@@ -1754,7 +1790,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6351442606464821516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6351442606682759301}
+        m_TargetAssemblyTypeName: GarageHandler, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: acceleration
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6351442606684785108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,13 +1814,14 @@ GameObject:
   - component: {fileID: 6351442606684785109}
   - component: {fileID: 6351442606684785114}
   - component: {fileID: 6351442606684785115}
+  - component: {fileID: 6351442606682759301}
   m_Layer: 0
   m_Name: Garage Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6351442606684785109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1833,6 +1882,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6351442606682759301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351442606684785108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b0aad356cfcc24399321f6ffcc7bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNearby: 0
+  inGarage: 0
+  upgradeNames: []
 --- !u!1 &6351442606692485647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,10 +2067,10 @@ RectTransform:
   m_Father: {fileID: 6351442605783432679}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -754.1667}
-  m_SizeDelta: {x: 300, y: 241.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6351442606826527755
 CanvasRenderer:
@@ -2089,7 +2153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6351442606826527754}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6351442606682759301}
+        m_TargetAssemblyTypeName: GarageHandler, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: armor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6351442606869167502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,10 +2619,10 @@ RectTransform:
   m_Father: {fileID: 6351442607779084782}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -462.50003}
-  m_SizeDelta: {x: 300, y: 241.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6351442607316588805
 CanvasRenderer:
@@ -2629,7 +2705,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6351442607316588804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6351442606682759301}
+        m_TargetAssemblyTypeName: GarageHandler, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: vehicleattack
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6351442607390942694
 GameObject:
   m_ObjectHideFlags: 0

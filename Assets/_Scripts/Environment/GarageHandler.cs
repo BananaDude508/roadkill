@@ -43,31 +43,40 @@ public class GarageHandler : MonoBehaviour
         inGarage = true;
     }
 
-    public void BuyUpgrade(string upgradeName, int price)
+    public void BuyUpgrade(string upgradeName)
     {
-        if (money <= price) return;
-
         switch (upgradeName)
         {
             case "speed":
+                if (money <= 150) break;
                 vehicleStats.maxSpeed += 0.5f;
+                print($"Upgraded maxSpeed ({vehicleStats.maxSpeed})");
                 break;
 
             case "acceleration":
+                if (money <= 200) break;
                 vehicleStats.acceleration += 1f;
+                print($"Upgraded acceleration ({vehicleStats.acceleration})");
                 break;
 
             case "armor":
+                if (money <= 250) break;
                 vehicleStats.defence += 0.5f;
+                print($"Upgraded defence ({vehicleStats.defence})");
                 break;
 
             case "vehicleattack":
+                if (money <= 250) break;
                 vehicleStats.driveDamage += 0.5f;
+                print($"Upgraded driveDamage ({vehicleStats.driveDamage})");
                 break;
 
             case "vehiclespecialattack":
+                if (money <= 250) break;
                 vehicleStats.driftDamageMod += 0.1f;
                 vehicleStats.driftBodyRotation += 2.5f;
+                print($"Upgraded driftDamageMod ({vehicleStats.driftDamageMod})");
+                print($"Upgraded driftBodyRotation ({vehicleStats.driftBodyRotation})");
                 break;
 
             default:
