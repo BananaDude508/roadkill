@@ -8,7 +8,7 @@ public class EnemyStats
 {
     public float health ;
     public float maxHealth = 5;
-    public float damage = 1f;
+    public float damage = 0.05f;
     public float speed = 1f;
     public int moneyReward = 5;
     public int rewardVariance = 1;

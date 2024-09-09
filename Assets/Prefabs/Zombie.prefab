@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8911119287622826489}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3c5494f6854124b8a869d5ec9fad9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    health: 3
+    maxHealth: 5
+    damage: 1
+    speed: 1
+    moneyReward: 5
+    rewardVariance: 1
   player: {fileID: 0}
 --- !u!50 &-770323171897832952
 Rigidbody2D:
@@ -97,7 +104,7 @@ GameObject:
   - component: {fileID: 3824626342638817934}
   m_Layer: 0
   m_Name: armR
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +190,7 @@ GameObject:
   - component: {fileID: 3824626342713531247}
   m_Layer: 0
   m_Name: Evil
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5048,7 +5055,7 @@ GameObject:
   - component: {fileID: 3824626343239464528}
   m_Layer: 0
   m_Name: armL
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

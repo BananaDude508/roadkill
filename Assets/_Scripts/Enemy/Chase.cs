@@ -20,7 +20,7 @@ public class Chase : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            playerHealth -= stats.damage;
+            playerController.TakeDamage(stats.damage);
         }
         
     }
