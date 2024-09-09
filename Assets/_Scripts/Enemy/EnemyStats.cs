@@ -19,18 +19,6 @@ public class EnemyStats
         speed = 1f;
         moneyReward = 5;
     }
-    void start()
-    {
-        health = maxHealth;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        if(health <= 0)
-        {
-            // body.IsDestroyed();
-        }
-    }
+    
 
 }
