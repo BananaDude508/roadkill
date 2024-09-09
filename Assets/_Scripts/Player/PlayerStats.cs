@@ -6,8 +6,10 @@ using UnityEngine;
 public static class PlayerStats
 {
     public static int money = 0;
-    public static float health = 10;
+    public static float playerHealth = 10;
 
+
+    public static PlayerController playerController;
 
     // Vehicle Stats
     public static VehicleMovement vehicleMovement;
@@ -21,7 +23,7 @@ public static class PlayerStats
     public static void ReInit()
     {
         money = 0;
-        health = 10;
+        playerHealth = 10;
         vehicleStats = new VehicleStats();
         weaponStats = new WeaponStats();
     }

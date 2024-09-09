@@ -15,14 +15,14 @@ public class GarageHandler : MonoBehaviour
     public void OpenGarageMenu()
     {
         Time.timeScale = 0f;
-        vehicleMovement.garageMenu.SetActive(true);
+        playerController.garageMenu.SetActive(true);
         vehicleMovement.rigidbody2d.velocity = Vector3.zero;
     }
 
     public void CloseGarageMenu()
     {
         Time.timeScale = 1f;
-        vehicleMovement.garageMenu.SetActive(false);
+        playerController.garageMenu.SetActive(false);
     }
 
     public void Update()
