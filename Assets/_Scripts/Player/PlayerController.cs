@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using static PlayerStats;
 using static PlayerPopups;
@@ -29,5 +30,16 @@ public class PlayerController : MonoBehaviour
     public void HurtEnemy(BasicEnemyController enemy, bool isDrifting)
     {
         enemy.TakeDamage(vehicleStats.driveDamage * (isDrifting ? vehicleStats.driftDamageMod : 1));
+    }
+    
+    
+    public void TakeDamage(float damage)
+    {
+        playerHealth -= damage;
+
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene("Gameover");
+        }
     }
 }
