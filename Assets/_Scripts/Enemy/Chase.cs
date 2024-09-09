@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PlayerStats;
 
 public class Chase : MonoBehaviour
 {
@@ -14,5 +15,13 @@ public class Chase : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, stats.speed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+    }
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerHealth -= stats.damage;
+        }
+        
     }
 }
