@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
         print(playerHealth);
     }
 
-    public void HurtEnemy(BasicEnemyController enemy, bool isDrifting)
+    public void HurtEnemy(BasicEnemyController enemy, bool isDrifting = false, float speedRatio = 1)
     {
-        enemy.TakeDamage(vehicleStats.driveDamage * (isDrifting ? vehicleStats.driftDamageMod : 1));
+        enemy.TakeDamage(vehicleStats.driveDamage * speedRatio * (isDrifting ? vehicleStats.driftDamageMod : 1));
     }
 }
