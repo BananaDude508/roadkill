@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public TextMeshProUGUI popupText;
+    public TextMeshProUGUI moneyText;
     public GameObject garageMenu;
     public Slider healthSlider;
 
@@ -25,23 +26,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(playerHealth);
+
     }
 
     public void HurtEnemy(BasicEnemyController enemy, bool isDrifting = false, float speedRatio = 1)
     {
-        enemy.TakeDamage(vehicleStats.driveDamage * speedRatio * (isDrifting ? vehicleStats.driftDamageMod : 1));
-    }
-    
-    public void TakeDamage(float damage)
-    {
-        playerHealth -= damage;
-        healthSlider.value = playerHealth;
-
-        if (playerHealth <= 0)
-        {
-            SceneManager.LoadScene("Gameover");
-        }
+        enemy.EnemyDamage(vehicleStats.driveDamage * speedRatio * (isDrifting ? vehicleStats.driftDamageMod : 1));
     }
 
     public void UpdateHealthSliderLimits()

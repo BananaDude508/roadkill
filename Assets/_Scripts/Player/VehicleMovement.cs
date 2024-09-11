@@ -112,7 +112,7 @@ public class VehicleMovement : MonoBehaviour
         {
             BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
             if (enemy == null) return;
-            if (speedRatio <= 0.1) return;
+            if (speedRatio <= 0.25) return;
             playerController.HurtEnemy(enemy, drifting, speedRatio);
         }
     }
