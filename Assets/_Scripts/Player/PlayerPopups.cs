@@ -1,16 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.PackageManager;
 
 public static class PlayerPopups
 {
     private static TextMeshProUGUI popupText;
     private static bool popupSet = false;
+    public static bool popupVisible = true;
+
 
     public static void InitPopup(TextMeshProUGUI text)
     {
-        if (popupSet) return;
+        if (popupSet)
+            throw new Exception("Cannot init popup text twice");
         popupText = text;
         popupSet = true;
     }
@@ -18,6 +23,8 @@ public static class PlayerPopups
     public static void SetPopupText(string text)
     {
         popupText.text = text;
+
+        popupText.gameObject.SetActive(popupVisible);
     }
 
     public static void ClearPopupText()

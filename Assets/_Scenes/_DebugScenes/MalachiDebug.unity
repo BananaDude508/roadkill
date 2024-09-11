@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNearby: 0
-  inGarage: 0
   upgradeNames: []
 --- !u!212 &697765568
 SpriteRenderer:
@@ -550,6 +549,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6351442606682759299}
+    - target: {fileID: 5605767727584475246, guid: f0e74d9e2a35ce7478e2c9d02edd370a, type: 3}
+      propertyPath: canSpawn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5605767727584475247, guid: f0e74d9e2a35ce7478e2c9d02edd370a, type: 3}
       propertyPath: m_RootOrder
       value: 1
