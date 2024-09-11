@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using static PlayerStats;
-using static PlayerPopups;
-using TMPro;
 
 public class VehicleMovement : MonoBehaviour
 {
-    public TextMeshProUGUI popupText;
-
     public TrailRenderer[] driftTrails;
     public GameObject body;
 
@@ -24,6 +20,11 @@ public class VehicleMovement : MonoBehaviour
     private float lastRotation;
     private float currentBodyRotation;
 
+    public Rigidbody2D rigidbody2d
+    {
+        get { return rb; }
+    }
+
 
 	private void Awake()
     {
@@ -33,9 +34,6 @@ public class VehicleMovement : MonoBehaviour
         rb.drag = vehicleStats.drag;
         rb.angularDrag = vehicleStats.angularDrag;
         currentGrip = vehicleStats.tyreGrip;
-
-        InitPopup(popupText);
-        ClearPopupText();
     }
 
 
@@ -55,11 +53,6 @@ public class VehicleMovement : MonoBehaviour
         currentGrip = Mathf.Clamp(currentGrip, -vehicleStats.driftGrip, vehicleStats.tyreGrip);
 
         UpdateBodyRotationValue();
-
-		if (drifting)
-            body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
-        else
-            body.transform.localRotation = Quaternion.identity;
 	}
 
     private void Move()
@@ -99,12 +92,28 @@ public class VehicleMovement : MonoBehaviour
             if (Mathf.Abs(currentBodyRotation) <= 1f)
                 currentBodyRotation = 0f;
 
-			else if (currentBodyRotation != 0)
+            else if (currentBodyRotation != 0)
                 currentBodyRotation -= Time.deltaTime * vehicleStats.bodyRotaPerSec * (currentBodyRotation > 0 ? 1 : -1);
 
             return;
         }
         currentBodyRotation -= Time.deltaTime * vehicleStats.bodyRotaPerSec * (turnInput > 0 ? 1 : -1);
-		currentBodyRotation = Mathf.Clamp(currentBodyRotation, -vehicleStats.driftBodyRotation, vehicleStats.driftBodyRotation);
-	}
+        currentBodyRotation = Mathf.Clamp(currentBodyRotation, -vehicleStats.driftBodyRotation, vehicleStats.driftBodyRotation);
+
+        if (drifting)
+            body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
+        else
+            body.transform.localRotation = Quaternion.identity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.rigidbody.CompareTag("Enemy"))
+        {
+            BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
+            if (enemy == null) return;
+            if (speedRatio <= 0.1) return;
+            playerController.HurtEnemy(enemy, drifting, speedRatio);
+        }
+    }
 }
