@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using static PlayerStats;
 using static PlayerPopups;
+using static GameManager;
 
 
 public class GarageHandler : MonoBehaviour
 {
     public bool playerNearby = false;
-    public bool inGarage = false;
 
     public string[] upgradeNames;
 
     public void OpenGarageMenu()
     {
+        if (isPaused) return;
         Time.timeScale = 0f;
         playerController.garageMenu.SetActive(true);
         vehicleMovement.rigidbody2d.velocity = Vector3.zero;
@@ -21,6 +22,7 @@ public class GarageHandler : MonoBehaviour
 
     public void CloseGarageMenu()
     {
+        if (isPaused) return;
         Time.timeScale = 1f;
         playerController.garageMenu.SetActive(false);
     }
