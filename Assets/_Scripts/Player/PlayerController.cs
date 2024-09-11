@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
         playerController = this;
         InitPopup(popupText);
         ClearPopupText();
+        moneyText.text = $"${money}";
     }
 
     // Update is called once per frame

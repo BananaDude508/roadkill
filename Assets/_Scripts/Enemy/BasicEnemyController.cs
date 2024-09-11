@@ -7,6 +7,7 @@ using static PlayerStats;
 public class BasicEnemyController : MonoBehaviour
 {
     public EnemyStats stats = new EnemyStats();
+	public ParticleSystem particleTrail;
 	public GameObject player;
 
 
@@ -22,6 +23,9 @@ public class BasicEnemyController : MonoBehaviour
         if (stats.health > 0) return;
 
         ChangeMoney(stats.GetReward());
+		particleTrail.transform.parent.DetachChildren();
+		Destroy(particleTrail.gameObject, particleTrail.main.startLifetime.constant);
+		particleTrail.Stop();
         Destroy(gameObject);
     }
 

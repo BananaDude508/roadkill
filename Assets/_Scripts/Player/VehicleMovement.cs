@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using static PlayerStats;
 
@@ -81,34 +82,22 @@ public class VehicleMovement : MonoBehaviour
         }
 
         rb.AddForce(transform.right * (-localVel.x * currentGrip));
+        
     }
 
     private void UpdateBodyRotationValue()
     {
-        if (Mathf.Abs(localVel.y) <= 0.6f) return;
-
-        if (!drifting || turnInput == 0)
-        {
-            if (Mathf.Abs(currentBodyRotation) <= 1f)
-                currentBodyRotation = 0f;
-
-            else if (currentBodyRotation != 0)
-                currentBodyRotation -= Time.deltaTime * vehicleStats.bodyRotaPerSec * (currentBodyRotation > 0 ? 1 : -1);
-
-            return;
-        }
-        currentBodyRotation -= Time.deltaTime * vehicleStats.bodyRotaPerSec * (turnInput > 0 ? 1 : -1);
-        currentBodyRotation = Mathf.Clamp(currentBodyRotation, -vehicleStats.driftBodyRotation, vehicleStats.driftBodyRotation);
-
         if (drifting)
-            body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
+            currentBodyRotation = CustomFunctions.SmoothLerp(currentBodyRotation, vehicleStats.driftBodyRotation * speedRatio * -turnInput, 0.1f);
         else
-            body.transform.localRotation = Quaternion.identity;
+            currentBodyRotation = CustomFunctions.SmoothLerp(currentBodyRotation, 0, 0.1f);
+
+        body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.rigidbody.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
             if (enemy == null) return;

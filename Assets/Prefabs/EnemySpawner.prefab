@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b5ccbd28db5884d90533ee961eca04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1.23
+  spawnRate: 3
   ZombiePrefabs:
   - {fileID: 3824626342628906444, guid: cd2c79883787c7c409c4f7108a8b9bc4, type: 3}
   canSpawn: 1
