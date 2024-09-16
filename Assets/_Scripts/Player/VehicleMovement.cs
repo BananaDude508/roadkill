@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +9,7 @@ using static PlayerStats;
 public class VehicleMovement : MonoBehaviour
 {
     public TrailRenderer[] driftTrails;
-    public GameObject body;
+    public Transform body;
 
     [HideInInspector] public Vector2 localVel;
 

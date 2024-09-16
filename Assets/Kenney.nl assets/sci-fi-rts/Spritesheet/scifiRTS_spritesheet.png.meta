@@ -1,0 +1,2943 @@
+fileFormatVersion: 2
+guid: bbbb9e49b7dc39c499f60efdd5917cfd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4862774019864439957ec985c5322c
+      internalID: -398717013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 449
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5906ead7e7fee04eb1b08bef962abc5
+      internalID: 804871281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 449
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f948d717432314d87657f846b7a3fd
+      internalID: -1849749697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 449
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f05657d06a60342b752693ed02b487
+      internalID: 99240988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7e470fada995445ab83c21b7ab5e73
+      internalID: 1167663632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 385
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cbde410f1695b4ea5fd1a2bb07e37a
+      internalID: 1359360933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 395
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98864fd0c214e4e46befd76452cbe51e
+      internalID: -1908534606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 385
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d0917ed17677f4ca437867e11c7107
+      internalID: 509855678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f8aec3fae167e4fa96edd88e67f421
+      internalID: 2059562054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6b114d37b00f04988c35d3ba65a3aa
+      internalID: -1087698883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 331
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cb78a6ce5a16c4bab2ef1794db36e2
+      internalID: -48488653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38737cfd83826704b819bdef69ecbe3c
+      internalID: 1140738094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f6a2aab693bc2449244a12c17f977e
+      internalID: 998183583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060e81c13ddbd2643b2d5a3cb9bc26fb
+      internalID: -1544382513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0ce682b083c884f98caff01a066ea6
+      internalID: -1727747099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 193
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3912ec8a4bb561f44a7f6f9e9649dcc1
+      internalID: -2110873458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 203
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a1621710059914a914d60248ef6e02
+      internalID: -605298102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53ca179a39abb9409f9ecff64941cb0
+      internalID: -1072665104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 129
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badc394ea8c74b84b8320492e3fe2ddc
+      internalID: -837407396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 139
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e5ba423ce19ca4ea03c84d81754f70
+      internalID: 1376754587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 99
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b93185e3d65b0449b094deb6cb4c36
+      internalID: -1902807751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7039283c4433fc541aebc8549ed22468
+      internalID: -2093392285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c3dd3c8a86abe40bfe73d6d6cbad5a
+      internalID: -1347630736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 75
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf24d4a5a7f5eb45a34e101539f9d81
+      internalID: 238339596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ea3d7313c8a024e821346c2c0b1527
+      internalID: 1926750230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36d00259ce14e840ae9f9e2292b0133
+      internalID: 714634488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 11
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e200d80e9aa517b459aaa6fef44da29a
+      internalID: 1410232033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 193
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e14933b103f8314cbaa5e6f169e867d
+      internalID: 2144235819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 163
+        width: 64
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cd4687ecf30cd4b9088b9193cbc04a
+      internalID: -36530471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 52
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dceca747b7bd19841950e664aa373ae6
+      internalID: 105257877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 52
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fca5b21a5516f84f9fc9e14b6ffd639
+      internalID: -896611305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b35e17d88b74574f9599f9d90684449
+      internalID: -442857199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 14
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1d535e3594ed24b82a8339f8fcdd96
+      internalID: 481140345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 23
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294083019ac58cd42864fa5f16e6f018
+      internalID: 1083690816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 87
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4238870abb80c54ea4b27a040ddae3f
+      internalID: -1003432361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 123
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9f3b1473401774a80e15e4459a1793
+      internalID: -1714641032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 159
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2027a8cfef1e04b499804d037a6da655
+      internalID: 258798478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 197
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf186f708639c448a6cbbc799cc67fa
+      internalID: 1834250657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 235
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85579f6aea1cb104e956030a76019e56
+      internalID: -2087395033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 273
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b753c490da1ac4187d083d8eb7ef09
+      internalID: 627295499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 329
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36b64ef73ad2304ba1b4999d333b5ec
+      internalID: 1285358403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 385
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c998da6b3f9d52a479106aae04f94600
+      internalID: -1455334924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 385
+        width: 44
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86287bacbd2a01d4988be95d803c460d
+      internalID: -633745298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 385
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e37f9d9a11d28b4cbc0906162adfd4b
+      internalID: 1631261479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 417
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ac71a7764d6444997588c2d53124be
+      internalID: -523966715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 469
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a56641fbca205142b513dad92aad744
+      internalID: -1377436987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 477
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2ecf35723caf842bba528b11102ad1
+      internalID: 256172141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 477
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f1a7eada28ce04186fbe81c743f8c2
+      internalID: 851501005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 473
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7bad8067ee1804db7bf11c63b8787a
+      internalID: 1245346989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 489
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb85337d923b461409465b9379299efa
+      internalID: -231474867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 489
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1f8a8207d95d641a4596914e260ff4
+      internalID: 1454045783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 465
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311d9d7e7d570ec40b6bd0b9336ad460
+      internalID: -1954910621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 441
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6784d6ef6bba5b4181586935e74945d
+      internalID: 1267386502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 417
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003b24b05312c114594008cc1cc1a651
+      internalID: 365534869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 393
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d880b971dc2f5ef4291dfcf23e5bf330
+      internalID: -1392585683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 369
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e970e781e1162b045a9a310a63f9464c
+      internalID: 504405327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 342
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b9e77718d91994b83e76f04cbf194a
+      internalID: -1562851620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 314
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8d605b1f4021040a16f64dc724b83b
+      internalID: -1102800413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 290
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661936f94e719e140baab18b9fc0e9a5
+      internalID: -2137422157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 262
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a26269f35a34454b94c535701038f25
+      internalID: -129688284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 242
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131a09136e62c244dbf08522b3cc7c8e
+      internalID: 1384496065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 218
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e501fb6877b067a448072b4cded299c3
+      internalID: -806249528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 218
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9520e1261e04bf04291cacd2aaef8d99
+      internalID: 1445352420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 186
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec18f1eba853ea49b3cf3663511c680
+      internalID: -275776433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 177
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4c706471bb8844686cb4ba8e3a1c38
+      internalID: 967384216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 181
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d027bccca827d42a5fe3988c299d6d
+      internalID: -83336419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 178
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481feb6404c475a4dbeb462c396db6ed
+      internalID: 1424394006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 218
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a28bb1601379647990ec4b0a836cb0
+      internalID: 334117206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 217
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d87b9944aacac540b715e9132a5f21f
+      internalID: 326860634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 257
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76c55e749881214fbdf93db0ad76475
+      internalID: -92739909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 286
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838de09a673433044905d9d2b90cb70d
+      internalID: 602887361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 338
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679d1dd2bab17f4439a22a8613038d5b
+      internalID: 1351052139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 402
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3b72dab0996f24fb7f50904cd69c81
+      internalID: -298398787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 449
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c879491923e604e89a1e88afd7bfc3
+      internalID: 2137641721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 425
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32aa2724af87145488ab977185a808a1
+      internalID: -2105747067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 442
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3eda2439d1e25d48a0a0acf3e83c071
+      internalID: 1031379324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 417
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e333ff3dcba124e98b865060deed36
+      internalID: -349592409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 402
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1866afb2ace832e4ca3b6f07a4681bea
+      internalID: -2119283199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 378
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ce6c08e422e24428a689658630ddf1
+      internalID: 788857598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 377
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb87b360aab9253499361278a9606383
+      internalID: -289734986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 345
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caab71f0a499bb1408f00178264fe257
+      internalID: 1501270660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 342
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9599c0cbb5a295478ce26d7af04fe51
+      internalID: 2122129721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 310
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6a111c3bec54947bf10fbb33e8bcf2
+      internalID: 755144289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 301
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdd9b9d6045c2c46b7d716e063bc0be
+      internalID: 792513232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 275
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d35a4d4e63272499edd216e0920e7f
+      internalID: 1999722275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 258
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3251b42a5e448742865a3f2d86b9e64
+      internalID: -1807060052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 232
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58cd6bb5a220ad41a7fa6c2b28748c8
+      internalID: -387447355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 333
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf6e3859dbf58b49b5dd7e6552b825a
+      internalID: 132462843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 345
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a20f2ebdee13742ac8fab76aecae22
+      internalID: -281586208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 305
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad7682d28fd90747bfa3b644f4d99fc
+      internalID: -1889366242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 305
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6052df340182dd45a5e927f4d1ccf03
+      internalID: 1900415378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 273
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad5499f42530804196338b8bc026a4b
+      internalID: -1203463934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 200
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2801a9a091460e243951fc4520ff6f46
+      internalID: -875631834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 187
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a25578c111138c4b9b5ecce5222ff65
+      internalID: 182587776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 163
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286533f31576a94408ed284b756afc0a
+      internalID: 1339582676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 163
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea64c1340adf474ebf55cb31301751d
+      internalID: 829125018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 142
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd0b375d5c916f4bb5506d6f06717b5
+      internalID: -263019564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 95
+        width: 45
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e558ba64cbf51d4f9280c19b48a13fb
+      internalID: -1801846396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 104
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c352683b7f2d754296613050b376e71
+      internalID: 463704621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 104
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e213c135c6f536a46816569617a2945a
+      internalID: -1341156715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 106
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5331b2d07db2ce840a6f8365f8d88dfe
+      internalID: -134115271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 108
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637e85995bf11aa44879ef9f33eae7b5
+      internalID: -1644440900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 121
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930a7cd52061d5d4997bed59ff8d8970
+      internalID: 1906579013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 84
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7b641d8d727754b9014fb3d032f346
+      internalID: 1968172494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 84
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04522239943a52c4a8142e2631539842
+      internalID: -1126101792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 60
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5936f2c24b5794ab9732ce554469f3
+      internalID: -673075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 60
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380c4140c9543334484d2566f8d94035
+      internalID: -1974257616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_107
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 36
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0313a659dc39d7c46ba6e6f01be57f51
+      internalID: 2115332306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_108
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 12
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816184ab537225445bd764b717ecc426
+      internalID: 1029246109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_109
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 14
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a13f7072cf85840a8e398b94094193
+      internalID: 736645494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_110
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 7
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803a9d2564dda774b9a3329d93f7a394
+      internalID: 687515600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_111
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 55
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172475956379156408f11ba972e8405a
+      internalID: 1540541412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_112
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297c39625fb21034586da4618dbee450
+      internalID: -1916512314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_113
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 15
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5351be8a3eac54ca0c469468db883b
+      internalID: -1720100147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_114
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 28
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e758a53b8af56804aa06f1a3932ee5dd
+      internalID: 1784781077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_115
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 55
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a632ead7a22321b4eab2731a03c2fd87
+      internalID: 1486483582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_116
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 64
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e286ecb84609bd4bac0ee35d3799d0e
+      internalID: 1120772348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_117
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 143
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12aa1cb8e73199b45877f47f0382a19e
+      internalID: -752657734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_118
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 146
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe150b0ff8a37f4996dce4c16396af4
+      internalID: -2060047023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_119
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 145
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3107af3c681d6c418eb3b030913cb2b
+      internalID: 57427965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 212
+        width: 64
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebc8286f6d5e844cb8ab07bdae5ae48
+      internalID: -1663717599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_121
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 267
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6309486878fc9143a944b3bd5382a37
+      internalID: -1856344395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 459
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3c92c9a1cc0cf4fa4ccf1560954021
+      internalID: -389011643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_123
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45e1c1184ac72a46969d8ed63777eeb
+      internalID: 1172185139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_124
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7d5625743ac3e4fab69668620b7527
+      internalID: -798654237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifiRTS_spritesheet_125
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 3
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed61f21f993eab848bb533260f0be44b
+      internalID: 841552415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      scifiRTS_spritesheet_0: -398717013
+      scifiRTS_spritesheet_1: 804871281
+      scifiRTS_spritesheet_10: -1908534606
+      scifiRTS_spritesheet_100: -134115271
+      scifiRTS_spritesheet_101: -1644440900
+      scifiRTS_spritesheet_102: 1906579013
+      scifiRTS_spritesheet_103: 1968172494
+      scifiRTS_spritesheet_104: -1126101792
+      scifiRTS_spritesheet_105: -673075
+      scifiRTS_spritesheet_106: -1974257616
+      scifiRTS_spritesheet_107: 2115332306
+      scifiRTS_spritesheet_108: 1029246109
+      scifiRTS_spritesheet_109: 736645494
+      scifiRTS_spritesheet_11: 509855678
+      scifiRTS_spritesheet_110: 687515600
+      scifiRTS_spritesheet_111: 1540541412
+      scifiRTS_spritesheet_112: -1916512314
+      scifiRTS_spritesheet_113: -1720100147
+      scifiRTS_spritesheet_114: 1784781077
+      scifiRTS_spritesheet_115: 1486483582
+      scifiRTS_spritesheet_116: 1120772348
+      scifiRTS_spritesheet_117: -752657734
+      scifiRTS_spritesheet_118: -2060047023
+      scifiRTS_spritesheet_119: 57427965
+      scifiRTS_spritesheet_12: -442857199
+      scifiRTS_spritesheet_120: -1663717599
+      scifiRTS_spritesheet_121: -1856344395
+      scifiRTS_spritesheet_122: -389011643
+      scifiRTS_spritesheet_123: 1172185139
+      scifiRTS_spritesheet_124: -798654237
+      scifiRTS_spritesheet_125: 841552415
+      scifiRTS_spritesheet_13: 481140345
+      scifiRTS_spritesheet_14: 1083690816
+      scifiRTS_spritesheet_15: -1003432361
+      scifiRTS_spritesheet_16: 2059562054
+      scifiRTS_spritesheet_17: -1087698883
+      scifiRTS_spritesheet_18: -48488653
+      scifiRTS_spritesheet_19: 1140738094
+      scifiRTS_spritesheet_2: 2144235819
+      scifiRTS_spritesheet_20: -1714641032
+      scifiRTS_spritesheet_21: 258798478
+      scifiRTS_spritesheet_22: 1834250657
+      scifiRTS_spritesheet_23: -2087395033
+      scifiRTS_spritesheet_24: 998183583
+      scifiRTS_spritesheet_25: -1544382513
+      scifiRTS_spritesheet_26: 627295499
+      scifiRTS_spritesheet_27: -1727747099
+      scifiRTS_spritesheet_28: 1285358403
+      scifiRTS_spritesheet_29: -1455334924
+      scifiRTS_spritesheet_3: -1849749697
+      scifiRTS_spritesheet_30: -633745298
+      scifiRTS_spritesheet_31: 1631261479
+      scifiRTS_spritesheet_32: -523966715
+      scifiRTS_spritesheet_33: -2110873458
+      scifiRTS_spritesheet_34: -605298102
+      scifiRTS_spritesheet_35: -1377436987
+      scifiRTS_spritesheet_36: 256172141
+      scifiRTS_spritesheet_37: 851501005
+      scifiRTS_spritesheet_38: 1245346989
+      scifiRTS_spritesheet_39: -231474867
+      scifiRTS_spritesheet_4: 99240988
+      scifiRTS_spritesheet_40: -1072665104
+      scifiRTS_spritesheet_41: -837407396
+      scifiRTS_spritesheet_42: 1376754587
+      scifiRTS_spritesheet_43: -1902807751
+      scifiRTS_spritesheet_44: 1454045783
+      scifiRTS_spritesheet_45: -1954910621
+      scifiRTS_spritesheet_46: 1267386502
+      scifiRTS_spritesheet_47: 365534869
+      scifiRTS_spritesheet_48: -2093392285
+      scifiRTS_spritesheet_49: -1347630736
+      scifiRTS_spritesheet_5: -36530471
+      scifiRTS_spritesheet_50: 238339596
+      scifiRTS_spritesheet_51: -1392585683
+      scifiRTS_spritesheet_52: 504405327
+      scifiRTS_spritesheet_53: -1562851620
+      scifiRTS_spritesheet_54: -1102800413
+      scifiRTS_spritesheet_55: -2137422157
+      scifiRTS_spritesheet_56: 1926750230
+      scifiRTS_spritesheet_57: 714634488
+      scifiRTS_spritesheet_58: 1410232033
+      scifiRTS_spritesheet_59: -129688284
+      scifiRTS_spritesheet_6: 105257877
+      scifiRTS_spritesheet_60: 1384496065
+      scifiRTS_spritesheet_61: -806249528
+      scifiRTS_spritesheet_62: 1445352420
+      scifiRTS_spritesheet_63: -275776433
+      scifiRTS_spritesheet_64: 967384216
+      scifiRTS_spritesheet_65: -83336419
+      scifiRTS_spritesheet_66: 1424394006
+      scifiRTS_spritesheet_67: 334117206
+      scifiRTS_spritesheet_68: 326860634
+      scifiRTS_spritesheet_69: -92739909
+      scifiRTS_spritesheet_7: -896611305
+      scifiRTS_spritesheet_70: 602887361
+      scifiRTS_spritesheet_71: 1351052139
+      scifiRTS_spritesheet_72: -298398787
+      scifiRTS_spritesheet_73: 2137641721
+      scifiRTS_spritesheet_74: -2105747067
+      scifiRTS_spritesheet_75: 1031379324
+      scifiRTS_spritesheet_76: -349592409
+      scifiRTS_spritesheet_77: -2119283199
+      scifiRTS_spritesheet_78: 788857598
+      scifiRTS_spritesheet_79: -289734986
+      scifiRTS_spritesheet_8: 1167663632
+      scifiRTS_spritesheet_80: 1501270660
+      scifiRTS_spritesheet_81: 2122129721
+      scifiRTS_spritesheet_82: 755144289
+      scifiRTS_spritesheet_83: 792513232
+      scifiRTS_spritesheet_84: 1999722275
+      scifiRTS_spritesheet_85: -1807060052
+      scifiRTS_spritesheet_86: -387447355
+      scifiRTS_spritesheet_87: 132462843
+      scifiRTS_spritesheet_88: -281586208
+      scifiRTS_spritesheet_89: -1889366242
+      scifiRTS_spritesheet_9: 1359360933
+      scifiRTS_spritesheet_90: 1900415378
+      scifiRTS_spritesheet_91: -1203463934
+      scifiRTS_spritesheet_92: -875631834
+      scifiRTS_spritesheet_93: 182587776
+      scifiRTS_spritesheet_94: 1339582676
+      scifiRTS_spritesheet_95: 829125018
+      scifiRTS_spritesheet_96: -263019564
+      scifiRTS_spritesheet_97: -1801846396
+      scifiRTS_spritesheet_98: 463704621
+      scifiRTS_spritesheet_99: -1341156715
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
