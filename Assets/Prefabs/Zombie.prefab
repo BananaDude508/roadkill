@@ -92,7 +92,7 @@ MonoBehaviour:
     maxHealth: 5
     damage: 1
     damageTime: 1
-    speed: 3
+    speed: 10
     moneyReward: 5
     rewardVariance: 1
   particleTrail: {fileID: 642601591822838642}
