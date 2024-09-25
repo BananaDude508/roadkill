@@ -4,6 +4,13 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 5f;
     public float damage = 2f;
+    public float lifetime = 5f;
+
+
+    private void Start()
+    {
+        Destroy(gameObject, lifetime);
+    }
 
     private void Update()
     {

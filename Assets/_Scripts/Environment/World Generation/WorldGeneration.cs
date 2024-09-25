@@ -8,11 +8,11 @@ using UnityEngine;
 
 public class WorldGeneration : MonoBehaviour
 {
+    public Transform worldParent;
     public GameObject[] tilePrefabs;
     public int viewDistance = 5;
     public float tileSize;
     private Dictionary<Vector2Int, Tile> spawnedTiles = new Dictionary<Vector2Int, Tile>();
-    public GameObject debugPoint;
 
 
     private void Update()
@@ -32,23 +32,23 @@ public class WorldGeneration : MonoBehaviour
                 Vector2Int tilePos = new Vector2Int(playerTilePosition.x + x, playerTilePosition.y + y);
                 if (Vector2Int.Distance(tilePos, playerTilePosition) > viewDistance) continue;
 
-                if (!spawnedTiles.TryGetValue(tilePos, out Tile tile))
-                {
-                    GameObject newTilePrefab = GetRandomValidTile(tilePos);
-                    Instantiate(debugPoint, new Vector3(tilePos.x * tileSize, tilePos.y * tileSize, 0), Quaternion.identity);
-                    if (newTilePrefab != null)
-                    {
-                        GameObject newTileObj = Instantiate(newTilePrefab, new Vector3(tilePos.x * tileSize, tilePos.y * tileSize, 0), Quaternion.identity);
-                        Tile newTile = newTileObj.GetComponent<Tile>();
-                        spawnedTiles.Add(tilePos, newTile);
-                    }
-                    else
-                        Debug.LogError($"Could not place a tile at {tilePos}");
-                }
-                else
+                if (spawnedTiles.TryGetValue(tilePos, out Tile tile))
                 {
                     tile.gameObject.SetActive(true);
+                    continue;
                 }
+
+                GameObject newTilePrefab = GetRandomValidTile(tilePos);
+                if (newTilePrefab == null)
+                {
+                    Debug.LogError($"Could not place a tile at {tilePos}");
+                    continue;
+                }
+
+                GameObject newTileObj = Instantiate(newTilePrefab, new Vector3(tilePos.x * tileSize, tilePos.y * tileSize, 0), Quaternion.identity, worldParent);
+                Tile newTile = newTileObj.GetComponent<Tile>();
+                newTileObj.name = tilePos.ToString() + newTile.tileName;
+                spawnedTiles.Add(tilePos, newTile);
             }
         }
     }
@@ -112,7 +112,7 @@ public class WorldGeneration : MonoBehaviour
     }
     private Vector2Int GetTilePosition(Vector3 worldPosition)
     {
-        return new Vector2Int(Mathf.FloorToInt(worldPosition.x / tileSize), 
-                              Mathf.FloorToInt(worldPosition.y / tileSize));
+        return new Vector2Int(Mathf.RoundToInt(worldPosition.x / tileSize), 
+                              Mathf.RoundToInt(worldPosition.y / tileSize));
     }
 }

@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
 
     public EdgeType topEdge, bottomEdge, leftEdge, rightEdge;
 
+    public string tileName = "";
 
     public EdgeType GetEdgeType(Edge edge)
     {
