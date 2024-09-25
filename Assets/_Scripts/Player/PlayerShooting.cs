@@ -1,5 +1,6 @@
 using UnityEngine;
 using static PlayerStats;
+using static GameManager;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class PlayerShooting : MonoBehaviour
     public Transform turret;
     public Transform spawnPos;
     public float speed;
-    public float shootOffset;
     private Vector3 mousePos;
 
 
@@ -20,7 +20,7 @@ public class PlayerShooting : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         turret.rotation = Quaternion.Euler(0, 0, angle);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isPaused && !inGarage)
             Shoot(angle);
     }
 

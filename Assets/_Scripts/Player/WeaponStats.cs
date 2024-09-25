@@ -6,7 +6,7 @@ public class WeaponStats
     public float fireRate = 2f; // Shots per second
     public float maxAmmo = 12f;
     public float currentAmmo = 12f;
-    public float reloadTime = 1f; // Ttime in seconds
+    public float reloadTime = 1f; // Time in seconds
     public float bulletDamage = 1.5f;
     public float bulletSpeed = 1200f; // Force applied using Rigidbody2D.AddForce();
     public float bulletLifetime = 3f; // Time in seconds

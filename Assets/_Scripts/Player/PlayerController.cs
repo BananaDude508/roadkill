@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public GameObject garageMenu;
     public GameObject pauseMenu;
+    public GameObject UI;
     public Slider healthSlider;
 
     // Start is called before the first frame update

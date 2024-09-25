@@ -5,7 +5,6 @@ public static class PlayerStats
     public static int money = 0;
     public static float maxHealth = 10;
     public static float playerHealth = 10;
-    public static bool inGarage = false;
 
     public static PlayerController playerController;
 
