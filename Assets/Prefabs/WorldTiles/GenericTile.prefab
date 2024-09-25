@@ -10971,4 +10971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d5a6225aff6574b94f57e89054bb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeTypes: 00000000000000000000000000000000
+  topEdge: 0
+  bottomEdge: 0
+  leftEdge: 0
+  rightEdge: 0
