@@ -76,7 +76,6 @@ public class MenuController : MonoBehaviour
         currentResolution = validResolutions[currentResolutionIndex];
 
         // Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen);
-
         resolutionText.text = currentResolution.ToString();
     }
 
