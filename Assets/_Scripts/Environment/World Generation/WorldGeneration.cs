@@ -93,19 +93,19 @@ public class WorldGeneration : MonoBehaviour
     {
         // Check all four neighbors (left, right, up, down) for edge compatibility
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.left, out Tile leftNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.left) != leftNeighbor.GetEdgeType(Tile.Edge.right))
+            if (tile.leftEdge != leftNeighbor.rightEdge)
                 return false;
 
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.right, out Tile rightNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.right) != rightNeighbor.GetEdgeType(Tile.Edge.left))
+            if (tile.rightEdge != rightNeighbor.leftEdge)
                 return false;
 
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.up, out Tile topNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.top) != topNeighbor.GetEdgeType(Tile.Edge.bottom))
+            if (tile.topEdge != topNeighbor.bottomEdge)
                 return false;
 
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.down, out Tile bottomNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.bottom) != bottomNeighbor.GetEdgeType(Tile.Edge.top))
+            if (tile.bottomEdge != bottomNeighbor.topEdge)
                 return false;
 
         return true;
