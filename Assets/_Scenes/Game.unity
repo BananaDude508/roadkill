@@ -134,14 +134,10 @@ PrefabInstance:
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1482803923}
-    - target: {fileID: 111808451, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
-      propertyPath: garagePrefab
-      value: 
-      objectReference: {fileID: 3748165073994473042, guid: 08c2f41a42299ba4c8d5e006ecb3a6a5, type: 3}
-    - target: {fileID: 111808451, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
-      propertyPath: spawnerPrefab
-      value: 
-      objectReference: {fileID: 5605767727584475244, guid: f0e74d9e2a35ce7478e2c9d02edd370a, type: 3}
+    - target: {fileID: 1628883196084887193, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -149,6 +145,10 @@ PrefabInstance:
     - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769267426216991683, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6351442605958183948, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_Name
@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 295082471}
+    - target: {fileID: 6351442607226459788, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6565098014082493669, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -35.438965
