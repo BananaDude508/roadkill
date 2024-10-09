@@ -41,7 +41,18 @@ public class WorldGeneration : MonoBehaviour
                 GameObject newTilePrefab = GetRandomValidTile(tilePos);
                 if (newTilePrefab == null)
                 {
-                    Debug.LogError($"Could not place a tile at {tilePos}");
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.left, out Tile lN);
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.right, out Tile rN);
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.up, out Tile tN);
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.down, out Tile bN);
+
+                    string requiredEdges = "";
+                    if (lN != null) requiredEdges += $"r:{lN.rightEdge} ";
+                    if (rN != null) requiredEdges += $"l:{rN.leftEdge} ";
+                    if (tN != null) requiredEdges += $"b:{tN.bottomEdge} ";
+                    if (bN != null) requiredEdges += $"t:{bN.topEdge}";
+
+                    Debug.LogError($"Could not place a tile at {tilePos} ({requiredEdges})");
                     continue;
                 }
 
@@ -71,6 +82,8 @@ public class WorldGeneration : MonoBehaviour
         List<GameObject> validTiles = GetValidTiles(tilePos);
         if (validTiles.Count > 0)
             return validTiles[Random.Range(0, validTiles.Count)];
+
+
 
         return null;
     }
