@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -10,7 +12,10 @@ public class WorldGeneration : MonoBehaviour
 {
     public Transform worldParent;
     public GameObject[] tilePrefabs;
+    public GameObject spawnerPrefab;
     public int viewDistance = 5;
+    public float spawnerChance = 0.3f;
+    public float garageChance = 0.05f;
     public float tileSize;
     private Dictionary<Vector2Int, Tile> spawnedTiles = new Dictionary<Vector2Int, Tile>();
 
@@ -49,6 +54,7 @@ public class WorldGeneration : MonoBehaviour
                 Tile newTile = newTileObj.GetComponent<Tile>();
                 newTileObj.name = tilePos.ToString() + newTile.tileName;
                 spawnedTiles.Add(tilePos, newTile);
+                AddRandomTilePois(tilePos);
             }
         }
     }
@@ -66,6 +72,26 @@ public class WorldGeneration : MonoBehaviour
         foreach (var tilePos in tilesToDeactivate)
             spawnedTiles[tilePos].gameObject.SetActive(false);
     }
+
+    private void AddRandomTilePois(Vector2Int tilePos)
+    {
+        
+
+        if (Random.Range(0f, 1f) <= garageChance)
+        {
+            
+        }
+       
+        
+        if (Random.Range(0f, 1f) <= spawnerChance)
+        {
+            Instantiate(spawnerPrefab);
+        }
+
+        
+        
+    }
+
     private GameObject GetRandomValidTile(Vector2Int tilePos)
     {
         List<GameObject> validTiles = GetValidTiles(tilePos);

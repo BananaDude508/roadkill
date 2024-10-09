@@ -4480,7 +4480,10 @@ MonoBehaviour:
   - {fileID: 8249033036964073920, guid: ac810bae5798a904da7be6285f4fc39f, type: 3}
   - {fileID: 8249033036964073920, guid: a71cb0080950f33469899fa357d45df9, type: 3}
   - {fileID: 8249033036964073920, guid: ac810bae5798a904da7be6285f4fc39f, type: 3}
+  spawnerPrefab: {fileID: 5605767727584475244, guid: f0e74d9e2a35ce7478e2c9d02edd370a, type: 3}
   viewDistance: 4
+  spawnerChance: 0.3
+  garageChance: 0.05
   tileSize: 32
 --- !u!1 &6351442605993765144
 GameObject:
