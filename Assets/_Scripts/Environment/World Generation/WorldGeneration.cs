@@ -46,7 +46,18 @@ public class WorldGeneration : MonoBehaviour
                 GameObject newTilePrefab = GetRandomValidTile(tilePos);
                 if (newTilePrefab == null)
                 {
-                    Debug.LogError($"Could not place a tile at {tilePos}");
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.left, out Tile lN);
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.right, out Tile rN);
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.up, out Tile tN);
+                    spawnedTiles.TryGetValue(tilePos + Vector2Int.down, out Tile bN);
+
+                    string requiredEdges = "";
+                    if (lN != null) requiredEdges += $"r:{lN.rightEdge} ";
+                    if (rN != null) requiredEdges += $"l:{rN.leftEdge} ";
+                    if (tN != null) requiredEdges += $"b:{tN.bottomEdge} ";
+                    if (bN != null) requiredEdges += $"t:{bN.topEdge}";
+
+                    Debug.LogError($"Could not place a tile at {tilePos} ({requiredEdges})");
                     continue;
                 }
 
@@ -98,6 +109,8 @@ public class WorldGeneration : MonoBehaviour
         if (validTiles.Count > 0)
             return validTiles[Random.Range(0, validTiles.Count)];
 
+
+
         return null;
     }
 
@@ -119,19 +132,19 @@ public class WorldGeneration : MonoBehaviour
     {
         // Check all four neighbors (left, right, up, down) for edge compatibility
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.left, out Tile leftNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.left) != leftNeighbor.GetEdgeType(Tile.Edge.right))
+            if (tile.leftEdge != leftNeighbor.rightEdge)
                 return false;
 
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.right, out Tile rightNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.right) != rightNeighbor.GetEdgeType(Tile.Edge.left))
+            if (tile.rightEdge != rightNeighbor.leftEdge)
                 return false;
 
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.up, out Tile topNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.top) != topNeighbor.GetEdgeType(Tile.Edge.bottom))
+            if (tile.topEdge != topNeighbor.bottomEdge)
                 return false;
 
         if (spawnedTiles.TryGetValue(tilePos + Vector2Int.down, out Tile bottomNeighbor))
-            if (tile.GetEdgeType(Tile.Edge.bottom) != bottomNeighbor.GetEdgeType(Tile.Edge.top))
+            if (tile.bottomEdge != bottomNeighbor.topEdge)
                 return false;
 
         return true;
