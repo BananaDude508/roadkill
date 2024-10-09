@@ -5,6 +5,8 @@ public class EnemySpawner : MonoBehaviour
 {
 	public float spawnRate = 1f;
 
+    public float spawnDistance = 5f;
+
 	public GameObject[] ZombiePrefabs;
 
 	public bool canSpawn = true;
@@ -26,7 +28,9 @@ public class EnemySpawner : MonoBehaviour
 
             if (canSpawn)
             {
-                BasicEnemyController enemy = Instantiate(enemyToSpawn, transform.position, Quaternion.identity).GetComponent<BasicEnemyController>();
+                float angle = Random.Range(0, 2 * Mathf.PI);
+                Vector3 randomPos = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * Mathf.Sqrt(Random.Range(0, spawnDistance));
+                BasicEnemyController enemy = Instantiate(enemyToSpawn, transform.position + randomPos, Quaternion.identity).GetComponent<BasicEnemyController>();
                 enemy.player = player;
             }
         }

@@ -13,6 +13,7 @@ public class WorldGeneration : MonoBehaviour
     public Transform worldParent;
     public GameObject[] tilePrefabs;
     public GameObject spawnerPrefab;
+    public GameObject garagePrefab;
     public int viewDistance = 5;
     public float spawnerChance = 0.3f;
     public float garageChance = 0.05f;
@@ -86,21 +87,18 @@ public class WorldGeneration : MonoBehaviour
 
     private void AddRandomTilePois(Vector2Int tilePos)
     {
-        
-
         if (Random.Range(0f, 1f) <= garageChance)
         {
-            
+            Vector2 pos = new Vector2(Random.Range(-tileSize/2f, tileSize/2f), Random.Range(-tileSize / 2f, tileSize / 2f)) + tilePos;
+            Instantiate(garagePrefab, pos, Quaternion.identity);
         }
        
         
         if (Random.Range(0f, 1f) <= spawnerChance)
         {
-            Instantiate(spawnerPrefab);
+            Vector2 pos = new Vector2(Random.Range(-tileSize / 2f, tileSize / 2f), Random.Range(-tileSize / 2f, tileSize / 2f)) + tilePos;
+            Instantiate(spawnerPrefab, pos, Quaternion.identity);
         }
-
-        
-        
     }
 
     private GameObject GetRandomValidTile(Vector2Int tilePos)
