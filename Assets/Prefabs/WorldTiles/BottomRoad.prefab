@@ -377,8 +377,8 @@ Tilemap:
   - first: {x: 0, y: -17, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -697,8 +697,8 @@ Tilemap:
   - first: {x: 0, y: -16, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1017,8 +1017,8 @@ Tilemap:
   - first: {x: 0, y: -15, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1337,8 +1337,8 @@ Tilemap:
   - first: {x: 0, y: -14, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10776,15 +10776,35 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1056
+  - m_RefCount: 1052
     m_Data: {fileID: 11400000, guid: e3f3af44fc4644b429a8d050eb7c5c31, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 3
+    m_Data: {fileID: 11400000, guid: 3c0f05c281ed5184e9a14b55cde8599f, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 449e5784bda3b534895369b5804935e3, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1056
+  - m_RefCount: 1052
     m_Data: {fileID: -398717013, guid: bbbb9e49b7dc39c499f60efdd5917cfd, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 3
+    m_Data: {fileID: 238339596, guid: bbbb9e49b7dc39c499f60efdd5917cfd, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1926750230, guid: bbbb9e49b7dc39c499f60efdd5917cfd, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1056
     m_Data:
@@ -10937,7 +10957,7 @@ GameObject:
   - component: {fileID: 3317259053264990650}
   - component: {fileID: 2761922437194567991}
   m_Layer: 0
-  m_Name: GenericTile
+  m_Name: BottomRoad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10972,6 +10992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topEdge: 0
-  bottomEdge: 0
+  bottomEdge: 1
   leftEdge: 0
   rightEdge: 0
+  tileName: 

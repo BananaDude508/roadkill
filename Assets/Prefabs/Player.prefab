@@ -4363,6 +4363,7 @@ GameObject:
   - component: {fileID: 6351442605958183954}
   - component: {fileID: 6351442605958183949}
   - component: {fileID: 9077115772613823810}
+  - component: {fileID: 111808451}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4462,6 +4463,25 @@ MonoBehaviour:
   turret: {fileID: 4860937485905970806}
   spawnPos: {fileID: 8254194187006062872}
   speed: 25
+--- !u!114 &111808451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351442605958183948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba27665005e154aa899a658c1fd490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldParent: {fileID: 0}
+  tilePrefabs:
+  - {fileID: 8249033036964073920, guid: ac810bae5798a904da7be6285f4fc39f, type: 3}
+  - {fileID: 8249033036964073920, guid: a71cb0080950f33469899fa357d45df9, type: 3}
+  - {fileID: 8249033036964073920, guid: ac810bae5798a904da7be6285f4fc39f, type: 3}
+  viewDistance: 4
+  tileSize: 32
 --- !u!1 &6351442605993765144
 GameObject:
   m_ObjectHideFlags: 0
