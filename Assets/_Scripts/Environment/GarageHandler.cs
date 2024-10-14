@@ -8,7 +8,7 @@ public class GarageHandler : MonoBehaviour
 {
     public bool playerNearby = false;
 
-    public string[] upgradeNames;
+   
 
     public void OpenGarageMenu()
     {
@@ -51,24 +51,29 @@ public class GarageHandler : MonoBehaviour
                 if (money <= 150) break;
                 vehicleStats.maxSpeed += 0.5f;
                 print($"Upgraded maxSpeed ({vehicleStats.maxSpeed})");
+                ChangeMoney(-150);
                 break;
 
             case "acceleration":
                 if (money <= 200) break;
                 vehicleStats.acceleration += 1f;
                 print($"Upgraded acceleration ({vehicleStats.acceleration})");
+                ChangeMoney(-200);
                 break;
 
-            case "armor":
+            case "vehicledefence":
                 if (money <= 250) break;
                 vehicleStats.defence += 0.5f;
                 print($"Upgraded defence ({vehicleStats.defence})");
+                ChangeMoney(-250);
                 break;
+
 
             case "vehicleattack":
                 if (money <= 250) break;
                 vehicleStats.driveDamage += 0.5f;
                 print($"Upgraded driveDamage ({vehicleStats.driveDamage})");
+                ChangeMoney(-250);
                 break;
 
             case "vehiclespecialattack":
@@ -77,6 +82,7 @@ public class GarageHandler : MonoBehaviour
                 vehicleStats.driftBodyRotation += 2.5f;
                 print($"Upgraded driftDamageMod ({vehicleStats.driftDamageMod})");
                 print($"Upgraded driftBodyRotation ({vehicleStats.driftBodyRotation})");
+                ChangeMoney(-250);
                 break;
 
             default:
