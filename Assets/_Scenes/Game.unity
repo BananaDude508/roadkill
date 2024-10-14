@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1482803923}
+    - target: {fileID: 2214741336548424309, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -190,10 +194,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6351442606239959558, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351442606300430505, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6351442606395623877, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 295082471}
+    - target: {fileID: 6351442607342506037, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351442607508527116, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6662940714083098885, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
