@@ -11,6 +11,8 @@ public class PlayerShooting : MonoBehaviour
     public float speed;
     private Vector3 mousePos;
 
+    private float shootCountdown = 0;
+
 
     void Update()
     {
@@ -19,6 +21,12 @@ public class PlayerShooting : MonoBehaviour
 
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         turret.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (shootCountdown > 0)
+        {
+            shootCountdown -= Time.deltaTime;
+            return;
+        }
 
         if (Input.GetMouseButtonDown(0) && !isPaused && !inGarage)
             Shoot(angle);
@@ -29,5 +37,6 @@ public class PlayerShooting : MonoBehaviour
         Bullet bullet = Instantiate(bulletObj, spawnPos.position, Quaternion.Euler(0, 0, angle)).GetComponent<Bullet>();
         bullet.speed = speed;
         bullet.damage = activeWeaponStats.bulletDamage;
+        shootCountdown = activeWeaponStats.reloadTime;
     }
 }
