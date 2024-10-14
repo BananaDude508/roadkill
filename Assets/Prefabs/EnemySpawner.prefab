@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 3
+  spawnDistance: 5
   ZombiePrefabs:
   - {fileID: 3824626342628906444, guid: cd2c79883787c7c409c4f7108a8b9bc4, type: 3}
   canSpawn: 1
-  player: {fileID: 0}
+  player: {fileID: 6351442605958183948, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
