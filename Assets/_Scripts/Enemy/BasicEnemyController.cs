@@ -10,10 +10,17 @@ public class BasicEnemyController : MonoBehaviour
 	public GameObject player;
 
 	public bool despawn = true;
-	public float despawnRadius = 160; // viewDistance (5) * tileSize (32)
+	public float despawnRadius = 160; // viewDistance (5) * tileSize (32) unity meters
+	[Tooltip("Values <= 0 do not despawn")] public float despawnTimer = 60; // 60 seconds
 
 
-	private void Update()
+    private void Start()
+    {
+		if (despawn && despawnTimer > 0)
+			Destroy(gameObject, despawnTimer);
+    }
+
+    private void Update()
 	{
 		Chase();
 

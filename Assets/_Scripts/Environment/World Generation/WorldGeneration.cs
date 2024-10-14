@@ -91,14 +91,16 @@ public class WorldGeneration : MonoBehaviour
         {
             Vector2 pos = new Vector2(Random.Range(-tileSize/2f, tileSize/2f), Random.Range(-tileSize / 2f, tileSize / 2f)) + 32*tilePos;
             Instantiate(garagePrefab, spawnedTiles[tilePos].transform);
+            Debug.Log($"Garage spawned at {pos} (tile {tilePos})");
         }
        
         
         if (Random.Range(0f, 1f) <= spawnerChance)
         {
             Vector2 pos = new Vector2(Random.Range(-tileSize / 2f, tileSize / 2f), Random.Range(-tileSize / 2f, tileSize / 2f)) + 32*tilePos;
-            EnemySpawner spawner = Instantiate(spawnerPrefab, spawnedTiles[tilePos].transform) . GetComponent<EnemySpawner>();
+            EnemySpawner spawner = Instantiate(spawnerPrefab, spawnedTiles[tilePos].transform).GetComponent<EnemySpawner>();
             spawner.player = gameObject;
+            Debug.Log($"Spawner spawned at {pos} (tile {tilePos})");
         }
     }
 
