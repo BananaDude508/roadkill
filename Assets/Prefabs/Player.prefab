@@ -3238,7 +3238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -35.438904}
+  m_AnchoredPosition: {x: 0, y: -35.43895}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5838814076738709223
@@ -4300,7 +4300,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: vehicledefense
+          m_StringArgument: vehicleattack
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6351442605903728336
@@ -4493,7 +4493,11 @@ MonoBehaviour:
   - {fileID: 8249033036964073920, guid: ee42406b160fdb341a144432ccdbcbbf, type: 3}
   - {fileID: 8249033036964073920, guid: dd57585b96a3ce349a7b01a5fc9152d3, type: 3}
   - {fileID: 8249033036964073920, guid: 5f34b95f526d0804dae931963e9d4d07, type: 3}
+  spawnerPrefab: {fileID: 5605767727584475244, guid: f0e74d9e2a35ce7478e2c9d02edd370a, type: 3}
+  garagePrefab: {fileID: 3748165073994473042, guid: 08c2f41a42299ba4c8d5e006ecb3a6a5, type: 3}
   viewDistance: 4
+  spawnerChance: 0.3
+  garageChance: 0.05
   tileSize: 32
 --- !u!1 &6351442605993765144
 GameObject:
@@ -5280,7 +5284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNearby: 0
-  upgradeNames: []
 --- !u!1 &6351442606692485647
 GameObject:
   m_ObjectHideFlags: 0
@@ -5547,7 +5550,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: armor
+          m_StringArgument: vehicledefense
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6351442606869167502
@@ -6099,7 +6102,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: vehicleattack
+          m_StringArgument: vehiclespecialattack
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6351442607390942694
@@ -7153,7 +7156,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 173141345652400295, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510981976175675, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 364f80b8f6c33184d9e96399d48cef1b, type: 2}
+    - target: {fileID: 5537510982024494738, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 364f80b8f6c33184d9e96399d48cef1b, type: 2}
+    - target: {fileID: 5537510982700951729, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.96125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951729, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.2375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951730, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5cf806f3d088951418061c58780d593e, type: 3}
+    - target: {fileID: 5537510982700951730, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Size.y
+      value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 5537510982959041520, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_Name
@@ -7203,9 +7250,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5537510982964143661, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 364f80b8f6c33184d9e96399d48cef1b, type: 2}
+    - target: {fileID: 5537510983064038918, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 364f80b8f6c33184d9e96399d48cef1b, type: 2}
     - target: {fileID: 6256129853493618173, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6307413751582373960, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_LocalRotation.w
