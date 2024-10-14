@@ -108,8 +108,6 @@ public class WorldGeneration : MonoBehaviour
         if (validTiles.Count > 0)
             return validTiles[Random.Range(0, validTiles.Count)];
 
-
-
         return null;
     }
 

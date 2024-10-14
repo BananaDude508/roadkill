@@ -9,10 +9,16 @@ public class BasicEnemyController : MonoBehaviour
 	public ParticleSystem particleTrail;
 	public GameObject player;
 
+	public bool despawn = true;
+	public float despawnRadius = 160; // viewDistance (5) * tileSize (32)
+
 
 	private void Update()
 	{
 		Chase();
+
+		if (despawn && Vector3.Distance(player.transform.position, transform.position) > despawnRadius)
+			Destroy(gameObject);
 	}
 
 	public void EnemyDamage(float damage)
