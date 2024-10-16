@@ -4,16 +4,12 @@ using TMPro;
 public static class PlayerPopups
 {
     private static TextMeshProUGUI popupText;
-    private static bool popupSet = false;
     public static bool popupVisible = true;
 
 
-    public static void InitPopup(TextMeshProUGUI text)
+    public static void AssignPopup(TextMeshProUGUI text)
     {
-        if (popupSet)
-            throw new Exception("Cannot init popup text twice");
         popupText = text;
-        popupSet = true;
     }
 
     public static void SetPopupText(string text)

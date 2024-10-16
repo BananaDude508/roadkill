@@ -18,16 +18,17 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         playerController = this;
-        InitPopup(popupText);
+        AssignPopup(popupText);
         ClearPopupText();
         moneyText.text = $"${money}";
+        Reset();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
+    // void Update()
+    // {
+    //     print(playerHealth);
+    // }
 
     public void HurtEnemy(BasicEnemyController enemy, bool isDrifting = false, float speedRatio = 1)
     {

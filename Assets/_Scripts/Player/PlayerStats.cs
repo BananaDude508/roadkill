@@ -5,7 +5,7 @@ public static class PlayerStats
     public static int money = 0;
     public static float maxHealth = 10;
     public static float playerHealth = 10;
-    public static float defence = 0;
+    public static float defence = 1;
 
     public static PlayerController playerController;
 
@@ -19,7 +19,7 @@ public static class PlayerStats
     public static void Reset()
     {
         money = 0;
-        defence = 0;
+        defence = 1;
         maxHealth = 10;
         playerHealth = 10;
         vehicleStats = new VehicleStats();

@@ -9,6 +9,8 @@ public class BasicEnemyController : MonoBehaviour
 	public ParticleSystem particleTrail;
 	public GameObject player;
 
+	public bool touchingPlayer = false;
+
 	public bool despawn = true;
 	public float despawnRadius = 160; // viewDistance (5) * tileSize (32) unity meters
 	[Tooltip("Values <= 0 do not despawn")] public float despawnTimer = 60; // 60 seconds
@@ -26,6 +28,11 @@ public class BasicEnemyController : MonoBehaviour
 
 		if (despawn && Vector3.Distance(player.transform.position, transform.position) > despawnRadius)
 			Destroy(gameObject);
+
+		if (touchingPlayer)
+		{
+			PlayerDamage(stats.damage * Time.deltaTime);
+		}
 	}
 
 	public void EnemyDamage(float damage)
@@ -50,26 +57,14 @@ public class BasicEnemyController : MonoBehaviour
 		transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 	}
 
-	private IEnumerator DamagePlayer()
-	{
-		print("start damage routine");
-		while (true)
-		{
-			print("damaging player");
-			yield return new WaitForSeconds(stats.damageTime);
-			PlayerDamage(stats.damage);
-		}
-	}
-
-	private Coroutine damageRoutine;
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Player")
-			damageRoutine = StartCoroutine(DamagePlayer());
+			touchingPlayer = true;
 	}
 	private void OnCollisionExit2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Player")
-			StopCoroutine(damageRoutine);
-	}
+            touchingPlayer = false;
+    }
 }
