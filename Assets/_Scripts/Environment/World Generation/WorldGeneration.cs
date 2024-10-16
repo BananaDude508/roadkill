@@ -77,6 +77,8 @@ public class WorldGeneration : MonoBehaviour
 
         List<Vector2Int> tilesToDeactivate = new List<Vector2Int>();
 
+        // Seperated into 2 seperate loops because otherwise it can skip some elements
+
         foreach (var tileEntry in spawnedTiles)
             if (Vector2Int.Distance(tileEntry.Key, playerTilePosition) > viewDistance)
                 tilesToDeactivate.Add(tileEntry.Key);

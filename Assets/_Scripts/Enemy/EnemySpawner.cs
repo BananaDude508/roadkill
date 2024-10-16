@@ -13,9 +13,16 @@ public class EnemySpawner : MonoBehaviour
 
     public GameObject player;
 
-    private void Start()
+    private Coroutine spawner;
+
+    private void OnEnable()
     {
-        StartCoroutine(Spawner());
+        spawner = StartCoroutine(Spawner());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(spawner);
     }
 
     private IEnumerator Spawner()
