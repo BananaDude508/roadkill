@@ -15,20 +15,14 @@ public class PlayerController : MonoBehaviour
     public Slider healthSlider;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         playerController = this;
         AssignPopup(popupText);
         ClearPopupText();
-        moneyText.text = $"${money}";
         Reset();
+        moneyText.text = $"${money}";
     }
-
-    // Update is called once per frame
-    // void Update()
-    // {
-    //     print(playerHealth);
-    // }
 
     public void HurtEnemy(BasicEnemyController enemy, bool isDrifting = false, float speedRatio = 1)
     {
