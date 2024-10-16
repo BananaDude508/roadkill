@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public static class PlayerStats
@@ -7,6 +9,8 @@ public static class PlayerStats
     public static float playerHealth = 10;
     public static float defence = 1;
 
+    public static PostProcessing postProcessing;
+
     public static PlayerController playerController;
 
     public static VehicleMovement vehicleMovement;
@@ -14,7 +18,6 @@ public static class PlayerStats
     public static VehicleStats vehicleStats = new VehicleStats();
 
     public static WeaponStats activeWeaponStats = new WeaponStats();
-
 
     public static void Reset()
     {
@@ -28,16 +31,18 @@ public static class PlayerStats
 
 	public static void PlayerDamage(float damage)
 	{
-		playerHealth -= damage / defence;
+        playerHealth -= damage / defence;
 		playerController.healthSlider.value = playerHealth;
 
-		if (playerHealth <= 0)
-		{
-			SceneManager.LoadScene("Gameover");
-		}
-	}
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene("Gameover");
+        }
+        
 
-	public static void ChangeMoney(int amount)
+    }
+
+    public static void ChangeMoney(int amount)
 	{
 		money += amount;
 		playerController.moneyText.text = $"${money}";
