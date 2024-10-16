@@ -30,9 +30,7 @@ public class BasicEnemyController : MonoBehaviour
 			Destroy(gameObject);
 
 		if (touchingPlayer)
-		{
 			PlayerDamage(stats.damage * Time.deltaTime);
-		}
 	}
 
 	public void EnemyDamage(float damage)

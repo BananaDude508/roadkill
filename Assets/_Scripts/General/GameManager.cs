@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = isPaused ? 0 : 1;
             playerController.pauseMenu.SetActive(isPaused);
             playerController.UI.SetActive(!isPaused);
+            playerController.garageMenu.SetActive(false);
             popupVisible = !isPaused;
         }
     }
