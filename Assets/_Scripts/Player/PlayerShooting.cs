@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     public Transform spawnPos;
     public float speed;
     private Vector3 mousePos;
+    public PlayerSoundManager soundManager;
 
     private float shootCountdown = 0;
 
@@ -38,5 +39,6 @@ public class PlayerShooting : MonoBehaviour
         bullet.speed = speed;
         bullet.damage = activeWeaponStats.bulletDamage;
         shootCountdown = activeWeaponStats.reloadTime;
+        soundManager.PlaySound("shoot");
     }
 }
