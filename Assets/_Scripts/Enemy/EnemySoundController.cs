@@ -19,7 +19,7 @@ public class EnemySoundController : MonoBehaviour
                 groanSource.clip = groanSounds[Random.Range(0, groanSounds.Length)];
                 groanSource.Play();
                 break;
-            case "die":
+            case "death":
                 groanSource.clip = deathSounds[Random.Range(0, deathSounds.Length)];
                 groanSource.Play();
                 break;
