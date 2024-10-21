@@ -4364,6 +4364,7 @@ GameObject:
   - component: {fileID: 6351442605958183949}
   - component: {fileID: 9077115772613823810}
   - component: {fileID: 111808451}
+  - component: {fileID: 629561991108030560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4425,6 +4426,7 @@ MonoBehaviour:
   - {fileID: 6351442606239959562}
   body: {fileID: 6351442607505962447}
   localVel: {x: 0, y: 0}
+  speedRatio: 0
 --- !u!50 &6351442605958183949
 Rigidbody2D:
   serializedVersion: 4
@@ -4499,6 +4501,32 @@ MonoBehaviour:
   spawnerChance: 0.3
   garageChance: 0.05
   tileSize: 32
+--- !u!61 &629561991108030560
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351442605958183948}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4}
+  m_EdgeRadius: 1.5
 --- !u!1 &6351442605993765144
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,15 +7220,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_Size.x
-      value: 0.54
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_Size.y
-      value: 1.18
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_EdgeRadius
-      value: 0.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5537510982700951731, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
