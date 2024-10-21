@@ -44,7 +44,7 @@ public class BasicEnemyController : MonoBehaviour
         stats.health -= damage;
 
         if (stats.health > 0) return;
-		OnDeath();
+			OnDeath();
         
     }
 
@@ -72,13 +72,14 @@ public class BasicEnemyController : MonoBehaviour
         ChangeMoney(stats.GetReward());
         particleTrail.transform.SetParent(null, true);
         Destroy(particleTrail.gameObject, particleTrail.main.startLifetime.constant);
-        particleTrail.Stop();
-
-        
+		particleTrail.Stop();        
         
         deathParticeles.transform.SetParent(null, true);
         Destroy(deathParticeles.gameObject, deathParticeles.main.startLifetime.constant);
         deathParticeles.Play();
+
+		soundController.PlaySound("death");
+
         Destroy(gameObject);
     }
 }
