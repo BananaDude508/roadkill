@@ -16,6 +16,8 @@ public class VehicleMovement : MonoBehaviour
 	private bool drifting;
     private float lastRotation;
     private float currentBodyRotation;
+    public PlayerSoundManager soundManager;
+    private bool drivingSoundActive = false;
 
     public Rigidbody2D rigidbody2d
     {
@@ -50,7 +52,19 @@ public class VehicleMovement : MonoBehaviour
         currentGrip = Mathf.Clamp(currentGrip, -vehicleStats.driftGrip, vehicleStats.tyreGrip);
 
         UpdateBodyRotationValue();
-	}
+
+        if (speedRatio > 0.2 && !drivingSoundActive)
+        {
+            soundManager.PlaySound("drive", true);
+            drivingSoundActive = true;
+        }
+
+        if (speedRatio < 0.2 && drivingSoundActive)
+        {
+            soundManager.PlaySound("drive", false);
+            drivingSoundActive = false;
+        }
+    }
 
     private void Move()
     {

@@ -15,6 +15,8 @@ public class BasicEnemyController : MonoBehaviour
 	public bool despawn = true;
 	public float despawnRadius = 160; // viewDistance (5) * tileSize (32) unity meters
 	[Tooltip("Values <= 0 do not despawn")] public float despawnTimer = 60; // 60 seconds
+	public float groanChance = 0.01f;
+	public EnemySoundController soundController;
 
 
     private void Start()
@@ -32,6 +34,9 @@ public class BasicEnemyController : MonoBehaviour
 
 		if (touchingPlayer)
 			PlayerDamage(stats.damage * Time.deltaTime);
+
+		if (Random.value <= groanChance)
+			soundController.PlaySound("groan");
 	}
 
 	public void EnemyDamage(float damage)
@@ -39,7 +44,7 @@ public class BasicEnemyController : MonoBehaviour
         stats.health -= damage;
 
         if (stats.health > 0) return;
-		OnDeath();
+			OnDeath();
         
     }
 
@@ -67,13 +72,14 @@ public class BasicEnemyController : MonoBehaviour
         ChangeMoney(stats.GetReward());
         particleTrail.transform.SetParent(null, true);
         Destroy(particleTrail.gameObject, particleTrail.main.startLifetime.constant);
-        particleTrail.Stop();
-
-        
+		particleTrail.Stop();        
         
         deathParticeles.transform.SetParent(null, true);
         Destroy(deathParticeles.gameObject, deathParticeles.main.startLifetime.constant);
         deathParticeles.Play();
+
+		soundController.PlaySound("death");
+
         Destroy(gameObject);
     }
 }
