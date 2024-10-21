@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerSoundManager : MonoBehaviour
 {
     public AudioSource drivingSource;
+
     public AudioSource shootingSource;
+
 
     public void PlaySound(string id)
     {

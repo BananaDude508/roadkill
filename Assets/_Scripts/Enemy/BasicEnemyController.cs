@@ -14,6 +14,8 @@ public class BasicEnemyController : MonoBehaviour
 	public bool despawn = true;
 	public float despawnRadius = 160; // viewDistance (5) * tileSize (32) unity meters
 	[Tooltip("Values <= 0 do not despawn")] public float despawnTimer = 60; // 60 seconds
+	public float groanChance = 0.01f;
+	public EnemySoundController soundController;
 
 
     private void Start()
@@ -31,6 +33,9 @@ public class BasicEnemyController : MonoBehaviour
 
 		if (touchingPlayer)
 			PlayerDamage(stats.damage * Time.deltaTime);
+
+		if (Random.value <= groanChance)
+			soundController.PlaySound("groan");
 	}
 
 	public void EnemyDamage(float damage)
