@@ -7,7 +7,8 @@ public class BasicEnemyController : MonoBehaviour
 {
     public EnemyStats stats = new EnemyStats();
 	public ParticleSystem particleTrail;
-	public GameObject player;
+	public ParticleSystem deathParticeles;
+    public GameObject player;
 
 	public bool touchingPlayer = false;
 
@@ -38,12 +39,8 @@ public class BasicEnemyController : MonoBehaviour
         stats.health -= damage;
 
         if (stats.health > 0) return;
-
-        ChangeMoney(stats.GetReward());
-		particleTrail.transform.parent.DetachChildren();
-		Destroy(particleTrail.gameObject, particleTrail.main.startLifetime.constant);
-		particleTrail.Stop();
-        Destroy(gameObject);
+		OnDeath();
+        
     }
 
 	private void Chase()
@@ -64,5 +61,19 @@ public class BasicEnemyController : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player")
             touchingPlayer = false;
+    }
+	private void OnDeath()
+	{
+        ChangeMoney(stats.GetReward());
+        particleTrail.transform.SetParent(null, true);
+        Destroy(particleTrail.gameObject, particleTrail.main.startLifetime.constant);
+        particleTrail.Stop();
+
+        
+        
+        deathParticeles.transform.SetParent(null, true);
+        Destroy(deathParticeles.gameObject, deathParticeles.main.startLifetime.constant);
+        deathParticeles.Play();
+        Destroy(gameObject);
     }
 }
