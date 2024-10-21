@@ -7,12 +7,12 @@ public class VehicleMovement : MonoBehaviour
     public Transform body;
 
     [HideInInspector] public Vector2 localVel;
+    [HideInInspector] public float speedRatio;
 
     private Rigidbody2D rb;
     private float moveInput;
     private float turnInput;
     private float currentGrip;
-    private float speedRatio;
 	private bool drifting;
     private float lastRotation;
     private float currentBodyRotation;
@@ -98,6 +98,18 @@ public class VehicleMovement : MonoBehaviour
             BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
             if (enemy == null) return;
             if (speedRatio <= 0.25) return;
+            playerController.HurtEnemy(enemy, drifting, speedRatio);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
+            if (enemy == null) return;
+            if (speedRatio <= 0.5) return;
+            if (!drifting) return;
             playerController.HurtEnemy(enemy, drifting, speedRatio);
         }
     }
