@@ -134,6 +134,14 @@ PrefabInstance:
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1482803923}
+    - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6351442605958183948, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_Name
       value: Player
