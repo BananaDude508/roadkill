@@ -8,13 +8,14 @@ using UnityEngine.Rendering.PostProcessing;
 public class PostProcessing : MonoBehaviour
 {
     public PostProcessVolume volume;
+
     private Vignette damageOverlay;
     private bool beingDamaged = false;
+
     public float damageOverlayIntensity = 0.3f;
     public float setToZero;
     public float damagerChecker;
     public float health;
-   
 
 
     private void Awake()
@@ -23,7 +24,9 @@ public class PostProcessing : MonoBehaviour
         volume.profile.TryGetSettings(out damageOverlay);
         health = PlayerStats.playerHealth;
         damagerChecker = health;
+
     }
+
     public void DamageVignette()
     {
         beingDamaged = true;
@@ -49,4 +52,5 @@ public class PostProcessing : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         beingDamaged = false;
     }
+
 }
