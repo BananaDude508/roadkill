@@ -5,11 +5,17 @@ public class Bullet : MonoBehaviour
     public float speed = 5f;
     public float damage = 2f;
     public float lifetime = 5f;
+    public ParticleSystem explosionParticals;
 
 
     private void Start()
     {
-        Destroy(gameObject, lifetime);
+        
+
+        if (gameObject != null && lifetime <= 0)
+        {
+            explode();
+        }
     }
 
     private void Update()
@@ -21,6 +27,14 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
             collision.gameObject.GetComponent<BasicEnemyController>().EnemyDamage(damage);
+        explode();
+    }
+    private void explode()
+    {
+        explosionParticals.transform.SetParent(null, true);
+        Destroy(explosionParticals.gameObject, explosionParticals.main.startLifetime.constant);
+        explosionParticals.Play();
+
         Destroy(gameObject);
     }
 }
