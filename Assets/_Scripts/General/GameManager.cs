@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static bool isPaused = false;
     public static bool inGarage = false;
-
     
     void Update()
     {

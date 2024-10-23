@@ -134,14 +134,6 @@ PrefabInstance:
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1482803923}
-    - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6351442605958183948, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -194,14 +186,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 295082471}
-    - target: {fileID: 6351442606692485645, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 6351442606692485645, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6662940714083098885, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -499,11 +483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 1171245622}
-  damageOverlayIntensity: 0.3
+  damageOverlayIntensity: 0.17
   setToZero: 0
   damagerChecker: 10
   health: 0
-  startLerp: 0
 --- !u!114 &1171245622
 MonoBehaviour:
   m_ObjectHideFlags: 0

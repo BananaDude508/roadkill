@@ -5,13 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class MenuController : MonoBehaviour
 {
     public GameObject menuObject;
     public GameObject settingsObject;
 
-    public AudioMixer mainMixer;
     public AudioMixer musicMixer;
     public AudioMixer SFXMixer;
 
@@ -53,19 +53,16 @@ public class MenuController : MonoBehaviour
         settingsObject.SetActive(false);
     }
 
-    public void UpdateMasterVolume(float volume)
-    {
-        mainMixer.SetFloat("volume", volume);
-    }
-
-	public void UpdateMusicVolume(float volume)
+    public void UpdateMusicVolume(float volume)
 	{
         musicMixer.SetFloat("volume", volume);
-	}
+        print($"set music to {volume}");
+    }
 
     public void UpdateSFXVolume(float volume)
     {
         SFXMixer.SetFloat("volume", volume);
+        print($"set sfx to {volume}");
     }
 
     public void SelectResolution(int direction)
