@@ -499,11 +499,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 1171245622}
-  damageOverlayIntensity: 0.3
+  damageOverlayIntensity: 0.17
   setToZero: 0
   damagerChecker: 10
   health: 0
-  startLerp: 0
 --- !u!114 &1171245622
 MonoBehaviour:
   m_ObjectHideFlags: 0

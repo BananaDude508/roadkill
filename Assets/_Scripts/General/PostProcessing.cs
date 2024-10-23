@@ -23,7 +23,6 @@ public class PostProcessing : MonoBehaviour
         volume.profile.TryGetSettings(out damageOverlay);
         health = PlayerStats.playerHealth;
         damagerChecker = health;
-        
     }
     public void DamageVignette()
     {
