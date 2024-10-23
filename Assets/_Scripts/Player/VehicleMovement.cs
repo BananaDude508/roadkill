@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 using static PlayerStats;
 
@@ -8,6 +10,12 @@ public class VehicleMovement : MonoBehaviour
 
     [HideInInspector] public Vector2 localVel;
     [HideInInspector] public float speedRatio;
+
+    public float driftTimeout = 3f;
+    public float spinTimeout = 3f;
+    private float driftingTime;
+    private bool spinningOut;
+    private float spinoutTime;
 
     private Rigidbody2D rb;
     private float moveInput;
@@ -38,6 +46,28 @@ public class VehicleMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (drifting)
+            driftingTime -= Time.deltaTime;
+        else
+            driftingTime = driftTimeout;
+
+        if (driftingTime <= 0)
+        {
+            drifting = false;
+            Spinout();
+            spinoutTime = spinTimeout;
+            spinningOut = true;
+        }
+
+        if (spinningOut)
+        {
+            spinoutTime -= Time.deltaTime;
+            spinningOut = spinoutTime >= 0;
+            return;
+        }
+
+;
+
         moveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
 
@@ -103,6 +133,12 @@ public class VehicleMovement : MonoBehaviour
             currentBodyRotation = CustomFunctions.SmoothLerp(currentBodyRotation, 0, 0.1f);
 
         body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
+    }
+
+    // Spinout, change body rotation
+    private IEnumerator Spinout()
+    {
+        return null;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
