@@ -157,7 +157,7 @@ public class VehicleMovement : MonoBehaviour
 
     private void OnHitEnemy(GameObject enemyObject)
     {
-        if (speedRatio <= 0.25) return;
+        if (speedRatio < 0.8) return;
 
         if (spinningOut)
         {
