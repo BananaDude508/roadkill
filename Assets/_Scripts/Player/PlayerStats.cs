@@ -31,15 +31,13 @@ public static class PlayerStats
 
 	public static void PlayerDamage(float damage)
 	{
+        if (vehicleMovement.spinningOut) return; // Spinning out causes invincibility
+
         playerHealth -= damage / defence;
 		playerController.healthSlider.value = playerHealth;
 
         if (playerHealth <= 0)
-        {
             SceneManager.LoadScene("Gameover");
-        }
-        
-
     }
 
     public static void ChangeMoney(int amount)

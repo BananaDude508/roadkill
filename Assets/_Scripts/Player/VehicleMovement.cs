@@ -8,13 +8,14 @@ public class VehicleMovement : MonoBehaviour
     public TrailRenderer[] driftTrails;
     public Transform body;
 
-    [HideInInspector] public Vector2 localVel;
+    [HideInInspector] public Vector3 localVel;
     [HideInInspector] public float speedRatio;
 
     public float driftTimeout = 3f;
     public float spinTimeout = 3f;
+    public float spinoutDegPerSec = 1080;
+    [HideInInspector] public bool spinningOut;
     private float driftingTime;
-    private bool spinningOut;
     private float spinoutTime;
 
     private Rigidbody2D rb;
@@ -54,15 +55,22 @@ public class VehicleMovement : MonoBehaviour
         if (driftingTime <= 0)
         {
             drifting = false;
-            Spinout();
             spinoutTime = spinTimeout;
             spinningOut = true;
+            RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 5f, Vector2.zero);
+
+            foreach (var hit in hits)
+                if (hit.collider.CompareTag("Enemy"))
+                    OnHitEnemy(hit.collider.gameObject);
         }
 
         if (spinningOut)
         {
             spinoutTime -= Time.deltaTime;
             spinningOut = spinoutTime >= 0;
+            body.transform.localEulerAngles += Time.deltaTime * spinoutDegPerSec * Vector3.forward;
+            transform.localPosition += 0.1f * Mathf.Sin(2 * Mathf.PI * spinoutTime) * Vector3.right;
+            transform.localPosition += localVel * Time.deltaTime * (spinoutTime / spinTimeout);
             return;
         }
 
@@ -135,32 +143,34 @@ public class VehicleMovement : MonoBehaviour
         body.transform.localRotation = Quaternion.Euler(0, 0, currentBodyRotation);
     }
 
-    // Spinout, change body rotation
-    private IEnumerator Spinout()
-    {
-        return null;
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
-        {
-            BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
-            if (enemy == null) return;
-            if (speedRatio <= 0.25) return;
-            playerController.HurtEnemy(enemy, drifting, speedRatio);
-        }
+            OnHitEnemy(collision.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
+            OnHitEnemy(collision.gameObject);
+    }
+
+    private void OnHitEnemy(GameObject enemyObject)
+    {
+        if (speedRatio < 0.8) return;
+
+        if (spinningOut)
         {
-            BasicEnemyController enemy = collision.gameObject.GetComponent<BasicEnemyController>();
-            if (enemy == null) return;
-            if (speedRatio <= 0.5) return;
-            if (!drifting) return;
-            playerController.HurtEnemy(enemy, drifting, speedRatio);
+            Rigidbody2D enemyRB = enemyObject.GetComponent<Rigidbody2D>();
+            if (enemyRB == null) return;
+            Vector2 forceDir = (transform.position - enemyObject.transform.position).normalized;
+            float explodeForce = Random.Range(800f, 1200f);
+            enemyRB.AddForce(-forceDir * explodeForce);
+            return;
         }
+
+        BasicEnemyController enemyC = enemyObject.GetComponent<BasicEnemyController>();
+        if (enemyC == null) return;
+        playerController.HurtEnemy(enemyC, drifting, speedRatio);
     }
 }
