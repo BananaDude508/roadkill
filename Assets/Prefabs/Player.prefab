@@ -4031,8 +4031,12 @@ MonoBehaviour:
   - {fileID: 6351442607342506041}
   - {fileID: 6351442606239959562}
   body: {fileID: 6351442607505962447}
-  localVel: {x: 0, y: 0}
+  localVel: {x: 0, y: 0, z: 0}
   speedRatio: 0
+  driftTimeout: 5
+  spinTimeout: 3
+  spinoutDegPerSec: 1440
+  spinningOut: 0
   soundManager: {fileID: 1933394317890234050}
 --- !u!50 &6351442605958183949
 Rigidbody2D:
@@ -4161,7 +4165,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 07f491ce0cd937b4b95fc9d84b00a539, type: 2}
   m_audioClip: {fileID: 8300000, guid: 24ca860b050b061419b5eaec2071b956, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.642
+  m_Volume: 0.736
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4257,7 +4261,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 07f491ce0cd937b4b95fc9d84b00a539, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6fceaa93421f4074d9100fc983dfa476, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.939
+  m_Volume: 0.718
   m_Pitch: 1
   Loop: 0
   Mute: 0
