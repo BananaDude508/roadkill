@@ -134,6 +134,14 @@ PrefabInstance:
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1482803923}
+    - target: {fileID: 1496924377562791007, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_Volume
+      value: 0.736
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006243529282415554, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: m_Volume
+      value: 0.718
+      objectReference: {fileID: 0}
     - target: {fileID: 3571441024497558280, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -189,6 +197,18 @@ PrefabInstance:
     - target: {fileID: 6351442605958183952, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351442605958183954, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: spinTimeout
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351442605958183954, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: driftTimeout
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351442605958183954, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
+      propertyPath: spinoutDegPerSec
+      value: 1440
       objectReference: {fileID: 0}
     - target: {fileID: 6351442606395623877, guid: bffc451f8042174478e6b86423e75fe0, type: 3}
       propertyPath: m_Camera
