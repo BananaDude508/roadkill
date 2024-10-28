@@ -35,8 +35,8 @@ public class BasicEnemyController : MonoBehaviour
 		if (touchingPlayer)
 			PlayerDamage(stats.damage * Time.deltaTime);
 
-		if (Random.value * Time.deltaTime <= groanChance)
-			soundController.PlaySound("groan");
+		if (Random.value <= groanChance * Time.deltaTime)
+            soundController.PlaySound("groan");
 	}
 
 	public void EnemyDamage(float damage)
