@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using UnityEngine;
+using Cinemachine;
 using static PlayerStats;
 
 public class VehicleMovement : MonoBehaviour
@@ -27,6 +28,11 @@ public class VehicleMovement : MonoBehaviour
     private float currentBodyRotation;
     public PlayerSoundManager soundManager;
     private bool drivingSoundActive = false;
+
+    public CinemachineBasicMultiChannelPerlin perlinNoise;
+    public Transform camTF;
+    public float ssAmpGain;
+    public float ssFreqGain;
 
     public Rigidbody2D rigidbody2d
     {
@@ -62,6 +68,8 @@ public class VehicleMovement : MonoBehaviour
             foreach (var hit in hits)
                 if (hit.collider.CompareTag("Enemy"))
                     OnHitEnemy(hit.collider.gameObject);
+
+            CameraShake(ssAmpGain, ssFreqGain, spinTimeout);
         }
 
         if (spinningOut)
@@ -172,5 +180,20 @@ public class VehicleMovement : MonoBehaviour
         BasicEnemyController enemyC = enemyObject.GetComponent<BasicEnemyController>();
         if (enemyC == null) return;
         playerController.HurtEnemy(enemyC, drifting, speedRatio);
+    }
+
+    private IEnumerator CameraShake(float amplitudeGain, float frequencyGain, float shakeTime)
+    {
+        SetCameraNoise(amplitudeGain, frequencyGain);
+        yield return new WaitForSeconds(shakeTime);
+        SetCameraNoise(0, 0);
+        camTF.transform.DOMove(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
+        camTF.transform.DORotate(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
+    }
+
+    private void SetCameraNoise(float amplitudeGain, float frequencyGain)
+    {
+        perlinNoise.m_AmplitudeGain = amplitudeGain;
+        perlinNoise.m_FrequencyGain = frequencyGain;
     }
 }
