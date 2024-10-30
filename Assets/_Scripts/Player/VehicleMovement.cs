@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using UnityEngine;
+using Cinemachine;
 using static PlayerStats;
 
 public class VehicleMovement : MonoBehaviour
@@ -28,6 +29,11 @@ public class VehicleMovement : MonoBehaviour
     public PlayerSoundManager soundManager;
     private bool drivingSoundActive = false;
 
+    public CinemachineVirtualCamera virtualCamera;
+    private CinemachineBasicMultiChannelPerlin perlinNoise;
+    public float ssAmpGain;
+    public float ssFreqGain;
+
     public Rigidbody2D rigidbody2d
     {
         get { return rb; }
@@ -42,6 +48,8 @@ public class VehicleMovement : MonoBehaviour
         rb.drag = vehicleStats.drag;
         rb.angularDrag = vehicleStats.angularDrag;
         currentGrip = vehicleStats.tyreGrip;
+
+        perlinNoise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
 
@@ -62,6 +70,8 @@ public class VehicleMovement : MonoBehaviour
             foreach (var hit in hits)
                 if (hit.collider.CompareTag("Enemy"))
                     OnHitEnemy(hit.collider.gameObject);
+
+            StartCoroutine(CameraShake(ssAmpGain, ssFreqGain, spinTimeout));
         }
 
         if (spinningOut)
@@ -172,5 +182,21 @@ public class VehicleMovement : MonoBehaviour
         BasicEnemyController enemyC = enemyObject.GetComponent<BasicEnemyController>();
         if (enemyC == null) return;
         playerController.HurtEnemy(enemyC, drifting, speedRatio);
+    }
+
+    private IEnumerator CameraShake(float amplitudeGain, float frequencyGain, float shakeTime)
+    {
+        SetCameraNoise(amplitudeGain, frequencyGain);
+        yield return new WaitForSeconds(shakeTime);
+        SetCameraNoise(0, 0);
+        // virtualCamera.transform.DOMove(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
+        virtualCamera.transform.DORotate(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
+    }
+
+    private void SetCameraNoise(float amplitudeGain, float frequencyGain)
+    {
+        print("Setting camera noise");
+        perlinNoise.m_AmplitudeGain = amplitudeGain;
+        perlinNoise.m_FrequencyGain = frequencyGain;
     }
 }
