@@ -8,10 +8,13 @@ public static class PlayerStats
     public static float maxHealth = 10;
     public static float playerHealth = 10;
     public static float defence = 1;
+    public static int Schange = 4;
 
     public static PostProcessing postProcessing;
 
     public static PlayerController playerController;
+
+    public static ParticleSystem Nuke;
 
     public static VehicleMovement vehicleMovement;
 
@@ -37,7 +40,11 @@ public static class PlayerStats
 		playerController.healthSlider.value = playerHealth;
 
         if (playerHealth <= 0)
-            SceneManager.LoadScene("Gameover");
+        {
+            
+            playerController.StartCoroutine("OnDeath");
+            
+        }
     }
 
     public static void ChangeMoney(int amount)
