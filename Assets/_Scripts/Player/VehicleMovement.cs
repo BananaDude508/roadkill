@@ -189,7 +189,7 @@ public class VehicleMovement : MonoBehaviour
         SetCameraNoise(amplitudeGain, frequencyGain);
         yield return new WaitForSeconds(shakeTime);
         SetCameraNoise(0, 0);
-        virtualCamera.transform.DOMove(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
+        // virtualCamera.transform.DOMove(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
         virtualCamera.transform.DORotate(Vector3.zero, 0.5f).SetEase(Ease.OutSine);
     }
 
