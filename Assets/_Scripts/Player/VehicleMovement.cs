@@ -161,7 +161,7 @@ public class VehicleMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (drifting && collision.gameObject.CompareTag("Enemy"))
             OnHitEnemy(collision.gameObject);
     }
 
@@ -195,7 +195,6 @@ public class VehicleMovement : MonoBehaviour
 
     private void SetCameraNoise(float amplitudeGain, float frequencyGain)
     {
-        print("Setting camera noise");
         perlinNoise.m_AmplitudeGain = amplitudeGain;
         perlinNoise.m_FrequencyGain = frequencyGain;
     }
