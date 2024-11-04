@@ -22,6 +22,8 @@ public static class PlayerStats
 
     public static WeaponStats activeWeaponStats = new WeaponStats();
 
+    public static GameManager gameManager;
+
     public static void Reset()
     {
         money = 0;
@@ -41,9 +43,8 @@ public static class PlayerStats
 
         if (playerHealth <= 0)
         {
-            
             playerController.StartCoroutine("OnDeath");
-            
+            gameManager.Invoke("EndScene", playerController.deathParticles.main.duration);
         }
     }
 

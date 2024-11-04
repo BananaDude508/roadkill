@@ -3981,6 +3981,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 6366462692987655284}
   UI: {fileID: 1577188277393295165}
   healthSlider: {fileID: 2452260010731013648}
+  deathParticles: {fileID: 0}
 --- !u!114 &6351442605958183954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4108,8 +4109,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 4}
-  m_EdgeRadius: 1.5
+  m_Size: {x: 2.95, y: 5.07}
+  m_EdgeRadius: 0
 --- !u!114 &1933394317890234050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6868,6 +6869,10 @@ PrefabInstance:
     - target: {fileID: 2190822147795548043, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353870108267585280, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5537510981976175675, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_Materials.Array.data[0]

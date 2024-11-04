@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     public GameObject UI;
     public Slider healthSlider;
 
-    // Start is called before the first frame update
+    public ParticleSystem deathParticles;
+
     void Start()
     {
         playerController = this;
@@ -38,12 +39,10 @@ public class PlayerController : MonoBehaviour
         healthSlider.maxValue = maxHealth;
     }
 
-    public IEnumerator OnDeath()
+    public void OnDeath()
     {
-        
-        // destroy player object
-        // detonate nuke
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Gameover");
+        deathParticles.transform.SetParent(null, true);
+        deathParticles.Play();
+        gameObject.SetActive(false);
     }
 }

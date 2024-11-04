@@ -1,12 +1,18 @@
 using UnityEngine;
 using static PlayerStats;
 using static PlayerPopups;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static bool isPaused = false;
     public static bool inGarage = false;
-    
+
+    private void Start()
+    {
+        gameManager = this;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -23,5 +29,10 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void EndScene()
+    {
+        SceneManager.LoadScene("Gameover");
     }
 }

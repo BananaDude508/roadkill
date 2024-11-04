@@ -27,9 +27,11 @@ public class BasicEnemyController : MonoBehaviour
 
     private void Update()
 	{
+		if (player == null) return;
+
 		Chase();
 
-		if (despawn && Vector3.Distance(player.transform.position, transform.position) > despawnRadius)
+        if (despawn && Vector3.Distance(player.transform.position, transform.position) > despawnRadius)
 			Destroy(gameObject);
 
 		if (touchingPlayer)
