@@ -6874,6 +6874,22 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5353870108267585280, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353870108267585280, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353870108267585280, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 40092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353870108267585280, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.49803922
+      objectReference: {fileID: 0}
     - target: {fileID: 5537510981976175675, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6993,6 +7009,10 @@ PrefabInstance:
     - target: {fileID: 6307413751582373960, guid: d049f727a8ef6834b9106609de442abd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004339925271065166, guid: d049f727a8ef6834b9106609de442abd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d049f727a8ef6834b9106609de442abd, type: 3}
