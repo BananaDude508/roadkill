@@ -116,7 +116,7 @@ public class VehicleMovement : MonoBehaviour
 
     private void Move()
     {
-        rb.AddForce(transform.up * moveInput * vehicleStats.acceleration);
+        rb.AddForce(transform.up * moveInput * vehicleStats.acceleration, ForceMode2D.Force);
 
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, vehicleStats.maxSpeed);
 
